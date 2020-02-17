@@ -304,6 +304,14 @@ audio{
 	.header-block, .post-list, .footer, .copyright{
 		width: 80%;
 	}
+    .alignleft,
+    .alignright {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
 }
 
