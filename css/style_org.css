@@ -30,12 +30,15 @@ a:hover{
 }
 .blog-title{
 	font-family: 'Montserrat', sans-serif;
+	color: red;
+
 }
 .blog-title h1{
 	text-align: center;
 	font-size: 60px;
 	margin-top: 26px;
 	font-weight: 700;
+	color: red;
 }
 .square{
   text-align: right;
@@ -133,10 +136,12 @@ a:hover{
 	    font-size:30px;
 	    display: inline;
 			line-height: 4rem;
+			color: red;
 }
 .post-page-title{
 	line-height: 4.5rem;
 	text-align: center;
+	color: red;
 }
 .post-meta-data{
 	font-size: 20px;
@@ -213,6 +218,7 @@ border-radius: 50px;
 	    font-size: 20px;
 
 }
+
 .footer-inner{
 	width: 100%;
 	margin: 0 auto;
