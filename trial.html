@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.column img {
+  margin-top: 12px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>Image Grid</h1>
+</div>
+
+<!-- Photo Grid -->
+<div class="row">
+  <div class="column">
+  <img src="/Users/milena/Desktop/mcrnogor.github.io/img/personal/ag.jpg" style="width:100%">
+  <img src="/img/personal/batur.jpg" style="width:100%">
+  <img src="/img/personal/dc.jpg" style="width:100%">
+  <img src="/img/personal/decks.jpg" style="width:100%">
+  <img src="/img/personal/gliklab.jpg" style="width:100%">
+  <img src="/img/personal/graduation.jpg" style="width:100%">
+  <img src="/img/personal/ISL.jpg" style="width:100%">
+  </div>
+  <div class="column">
+  <img src="/img/personal/kennedy.jpg" style="width:100%">
+  <img src="/img/personal/rose.jpg" style="width:100%">
+  <img src="/img/personal/snowball.jpg" style="width:100%">
+  <img src="/img/personal/snowballs.jpg" style="width:100%">
+  <img src="/img/personal/swim.jpg" style="width:100%">
+  <img src="/img/personal/uwc.png" style="width:100%">
+  </div>
+  </div>
+</div>
+
+</body>
+</html>
