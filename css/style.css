@@ -293,10 +293,16 @@ border-radius: 50px;
 }
 
 audio{
-    width: 40%;
+	width: 10%;
+	box-shadow: 5px 5px 3px rgba(0,0, 0, 0.4);
+	border-radius: 90px;
+	align: center;
+	transform: scale(0.8);
+	opacity: 0.6;
+    /* width: 40%;
     height: 50;
 		align: center;
-		opacity: 0.6;
+		opacity: 0.6; */
 }
 
 /* Add a hover effect if you want */
