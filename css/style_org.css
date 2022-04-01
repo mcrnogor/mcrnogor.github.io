@@ -272,16 +272,53 @@ border-radius: 50px;
   text-decoration: none;
 }
 
+
+nav {
+	display: block;
+	width: 960px;
+	margin: 100px auto;
+	text-align: left;
+}
+nav ul {
+	list-style: none;
+}
+nav li {
+	display: inline-block;
+}
+nav a {
+	display: inline-block;
+	background: white;
+	color: white;
+	padding: 1px 1px;
+	border: 1px solid white;
+	text-decoration: none;
+}
+nav a:hover {
+	border: 1px solid white;
+	background: white;
+}
+nav a:active {
+	background: white;
+}
+nav select {
+	display: none;
+}
+
+@media (max-width: 960px) {
+	nav ul     { display: none; }
+	nav select { display: inline-block; }
+}
+
+
 audio{
     width: 40%;
     height: 50;
 		align: center;
 		opacity: 0.6;
 }
-
 /* Add a hover effect if you want */
 .fa:hover {
-  opacity: 0.7;
+  opacity: 0.6;
 }
 @media only screen and (max-width: 900px) {
 	.header-block, .post-list, .footer, .copyright{
