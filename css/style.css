@@ -111,6 +111,7 @@ a:hover{
   display: block;
   margin: auto;
 	max-width: 100%;
+	height: auto;
 }
 .post-meta-data{
 	color:  #767676;
