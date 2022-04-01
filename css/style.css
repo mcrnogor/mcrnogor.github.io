@@ -1,5 +1,9 @@
-html,body{
-	height: 100%;
+html, body, {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
 }
 ::selection {
   color: #fff;
@@ -298,7 +302,7 @@ nav {
 	margin: 0;
 	padding: 1px;
 	display: block;
-	width: 1500px;
+	width: 600px;
 	text-align: left;
 }
 nav ul {
@@ -327,10 +331,10 @@ nav select {
 	display: none;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 600px) {
 	nav ul     { display: none;}
-	nav li {display: inline-block}
-	nav select { display: inline-block }
+	nav li {display: inline-block;}
+	nav select { display: inline-block;}
 }
 
 
