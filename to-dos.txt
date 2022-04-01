@@ -1,0 +1,6 @@
+To-do [Apr 1, 2022]: 
+- automate CV updates
+- clean up the pages headers
+- update the style.css w/ the double column page stuff (personal.html)
+- clean up redundancies 
+-  adaptability dropdown definition in the style.css
