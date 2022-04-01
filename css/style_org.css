@@ -278,9 +278,12 @@ nav {
 	width: 960px;
 	margin: 100px auto;
 	text-align: left;
+	padding: 0;
 }
 nav ul {
 	list-style: none;
+	padding: 0;
+
 }
 nav li {
 	display: inline-block;

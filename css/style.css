@@ -293,10 +293,12 @@ border-radius: 50px;
   text-decoration: none;
 }
 
+
 nav {
+	margin: 0;
+	padding: 1px;
 	display: block;
 	width: 960px;
-	margin: 100px auto;
 	text-align: left;
 }
 nav ul {
@@ -304,6 +306,7 @@ nav ul {
 }
 nav li {
 	display: inline-block;
+
 }
 nav a {
 	display: inline-block;
@@ -325,7 +328,7 @@ nav select {
 }
 
 @media (max-width: 960px) {
-	nav ul     { display: none; }
+	nav ul     { display: none;}
 	nav select { display: inline-block; }
 }
 

@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
 
-    <title>outreach</title>
-    <meta name="description" content="Please feel free to contact me." />
+    <title> Milena Crnogorčević</title>
+    <meta name="description"
+    content="Milena a fifth-year PhD candidate in astronomy at University of Maryland, interested in high-energy astroparticle physics. She is currently working with Dr. Regina Caputo and Dr. Manuel Meyer on indirect dark matter searches using data from NASA's Fermi Gamma-ray Space Telescope.
+    She is also involved in multimessenger efforts; in particular, she is a member of a group led by Dr. Michela Negro working on cross-correlation studies between IceCube astrophysical neutrino maps and Fermi-LAT gamma-ray unresolved sources; as well as the lead in Swift-BAT follow-up analysis of LIGO/Virgo triggers during the third observational run."
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,36 +35,62 @@
     </style>
 
 
+  <header class="header-block row">
+    <div class="blog-title">
+      <h1>outreach
+      </h1>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    	<script>
+    	 // DOM ready
+    	 $(function() {
 
-    <body>
+          // Create the dropdown base
+          $("<select />").appendTo("nav");
 
-      <header class="header-block row">
-        <div class="blog-title">
-          <h1>outreach</h1>
-          <!-- <audio controls preload="none">
-            <source src="milena_c.m4a" type="audio/mp4" />
-          </audio> -->
-          <!-- </div>
-          <p style="text-align:right"><font size="3.5"> <br>  Third-year graduate student studying axion-like particles and where to find them. <br> Curently at <a href="http://www.astro.umd.edu">University of Maryland Astronomy Department</a> and <a href="https://fermi.gsfc.nasa.gov">NASA <i> Fermi</i></a>; <br> <a href="https://www.lpcuwc.edu.hk">  LPCUWC </a> and <a href="http://www.middlebury.edu/academics/physics"> Middlebury College </a> alumna.
+          // Create default option "Go to..."
+          $("<option />", {
+             "selected": "selected",
+             "value"   : "",
+             "text"    : "Go to..."
+          }).appendTo("nav select");
+
+          // Populate dropdown with menu items
+          $("nav a").each(function() {
+           var el = $(this);
+           $("<option />", {
+               "value"   : el.attr("href"),
+               "text"    : el.text()
+           }).appendTo("nav select");
+          });
+
+    	   // To make dropdown actually work
+    	   // To make more unobtrusive: http://css-tricks.com/4064-unobtrusive-page-changer/
+          $("nav select").change(function() {
+            window.location = $(this).find("option:selected").val();
+          });
+
+    	 });
+    	</script>
+
+      <nav>
+
+      	<ul>
+          <li><a href="index.html">Home</a></li>&nbsp;&nbsp;
+          <li><a href="research.html">Research</a></li>&nbsp;&nbsp;
+          <li><a href="outreach.html">Outreach</a></li>&nbsp;&nbsp;
+          <li><a href="CV.html">CV</a></li>&nbsp;&nbsp;
+          <li><a href="personal.html">Personal</a></li>&nbsp;&nbsp;
+          <li><a href="contact.html">Contact</a></li>&nbsp;&nbsp;
+          <li><a href="upcoming.html"><i>Upcoming</i></a></li>&nbsp;&nbsp;
+
+        </ul>
+      </nav>
+          </head>
 
 
-        </div> -->
-        <div class="col-md-12">
-          <a href="index.html">Home</a>&nbsp;&nbsp;
-          <a href="research.html">Research</a>&nbsp;&nbsp;
-          <a href="outreach.html">Outreach</a>&nbsp;&nbsp;
-          <a href="CV.html">CV</a>&nbsp;&nbsp;
-          <a href="personal.html">Personal</a>&nbsp;&nbsp;
-          <a href="contact.html">Contact</a>&nbsp;&nbsp;
-          <a href="upcoming.html"><i>Upcoming</i></a>&nbsp;&nbsp;
+  </header>
 
-          <span style="float:right;">
-            <small><a href="index.html" style="color:#1F315D">English</a> &nbsp;&nbsp; <a href="index_serbian.html" style="color:#1F315D">srpski</a> &nbsp;&nbsp;<a href="index_italian.html" style="color:#1F315D">italiano</a></small>
-        </span>
-
-        </div>
-
-      </header>
+  <body>
 
 <section class="post-list post-content"><div class="post-data">
 
@@ -86,25 +114,11 @@
 
 </section>
 
-
-
 <section class="footer">
-  <div class="footer-inner row">
-
-    <div class="col-md-12">
-
-      <!-- <p style = "font-family: 'Radley', serif;font-size:14px;">
-        Milena Crnogorčević personal website.
-      </p> -->
-    </div>
-    <!-- <div class="col-md-12">
-      <a href="index.html">home</a>&nbsp;&nbsp;
-      <a href="aboutme.html">about</a>&nbsp;&nbsp;
-      <a href="contact.html">contact</a>&nbsp;&nbsp;
-
-        </div> -->
-
-  </div>
+  <span style="float:center; font-family:'Montserrat', sans-serif;font-size:12px;">
+    <small><a href="index.html" style="color:#1F315D">English</a> &nbsp;&nbsp; <a href="index_serbian.html" style="color:#1F315D">srpski</a> &nbsp;&nbsp;<a href="index_italian.html" style="color:#1F315D">italiano</a></small>
+</span>
+<br></br>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
