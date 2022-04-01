@@ -329,7 +329,7 @@ nav select {
 
 @media (max-width: 620px) {
 	nav ul     { display: none;}
-	nav select { display: inline-block; }
+	nav select { display: inline-block; position: absolute; }
 }
 
 
