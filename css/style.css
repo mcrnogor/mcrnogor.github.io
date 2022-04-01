@@ -302,7 +302,7 @@ nav {
 	margin: 0;
 	padding: 1px;
 	display: block;
-	width: 600px;
+	width: 660px;
 	text-align: left;
 }
 nav ul {
@@ -331,9 +331,8 @@ nav select {
 	display: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 660px) {
 	nav ul     { display: none;}
-	nav li {display: inline-block;}
 	nav select { display: inline-block;}
 }
 
