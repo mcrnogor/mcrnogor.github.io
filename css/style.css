@@ -332,9 +332,9 @@ nav select {
 
 @media (max-width: 960px) {
 	nav ul {
-    display: none;}
+    display: inline-block;} /* should be : none. but dropdown is not working on iPhones for some reason, fig it out.*/
 	nav select {
-    display: inline-block;}
+    display: none;} /* inline-block */
 }
 
 
