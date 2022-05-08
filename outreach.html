@@ -40,59 +40,23 @@
     <div class="blog-title">
       <h1>outreach
       </h1>
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    	<script>
-    	 // DOM ready
-    	 $(function() {
+      <div class="col-md-12">
+        <a href="index.html">Home</a>&nbsp;&nbsp;
+        <div class="dropdown">
+        <div class="dropbtn">⋮ Graduate School &nbsp;&nbsp;</div>
+        <div class="dropdown-content">
+          <a href="research.html">Research</a>
+          <a href="CV.html">CV</a>
+          <a href="outreach.html">Outreach</a>
+          <a href="upcoming.html"><i>Upcoming talks</i></a>
+        </div>
+      </div>
+        <a href="personal.html">Personal</a></li>&nbsp;&nbsp;
+        <a href="contact.html">Contact</a>&nbsp;&nbsp;
+      </div>
+    </header>
 
-          // Create the dropdown base
-          $("<select />").appendTo("nav");
-
-          // Create default option "Go to..."
-          $("<option />", {
-             "selected": "selected",
-             "value"   : "",
-             "text"    : "Go to..."
-          }).appendTo("nav select");
-
-          // Populate dropdown with menu items
-          $("nav a").each(function() {
-           var el = $(this);
-           $("<option />", {
-               "value"   : el.attr("href"),
-               "text"    : el.text()
-           }).appendTo("nav select");
-          });
-
-    	   // To make dropdown actually work
-    	   // To make more unobtrusive: http://css-tricks.com/4064-unobtrusive-page-changer/
-          $("nav select").change(function() {
-            window.location = $(this).find("option:selected").val();
-          });
-
-    	 });
-    	</script>
-
-      <nav>
-
-      	<ul>
-          <li><a href="index.html">Home</a></li>&nbsp;&nbsp;
-          <li><a href="research.html">Research</a></li>&nbsp;&nbsp;
-          <li><a href="outreach.html">Outreach</a></li>&nbsp;&nbsp;
-          <li><a href="CV.html">CV</a></li>&nbsp;&nbsp;
-          <li><a href="personal.html">Personal</a></li>&nbsp;&nbsp;
-          <li><a href="contact.html">Contact</a></li>&nbsp;&nbsp;
-          <li><a href="upcoming.html"><i>Upcoming talks</i></a></li>&nbsp;&nbsp;
-
-        </ul>
-      </nav>
-          </head>
-
-
-  </header>
-
-
-
+<body>
 <section class="post-list post-content"><div class="post-data">
 
 

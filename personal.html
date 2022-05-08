@@ -83,56 +83,23 @@
     <div class="blog-title">
       <h1>personal
       </h1>
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    	<script>
-    	 // DOM ready
-    	 $(function() {
+      <div class="col-md-12">
+        <a href="index.html">Home</a>&nbsp;&nbsp;
+        <div class="dropdown">
+        <div class="dropbtn">⋮ Graduate School &nbsp;&nbsp;</div>
+        <div class="dropdown-content">
+          <a href="research.html">Research</a>
+          <a href="CV.html">CV</a>
+          <a href="outreach.html">Outreach</a>
+          <a href="upcoming.html"><i>Upcoming talks</i></a>
+        </div>
+      </div>
+        <a href="personal.html">Personal</a></li>&nbsp;&nbsp;
+        <a href="contact.html">Contact</a>&nbsp;&nbsp;
+      </div>
+    </header>
 
-          // Create the dropdown base
-          $("<select />").appendTo("nav");
-
-          // Create default option "Go to..."
-          $("<option />", {
-             "selected": "selected",
-             "value"   : "",
-             "text"    : "Go to..."
-          }).appendTo("nav select");
-
-          // Populate dropdown with menu items
-          $("nav a").each(function() {
-           var el = $(this);
-           $("<option />", {
-               "value"   : el.attr("href"),
-               "text"    : el.text()
-           }).appendTo("nav select");
-          });
-
-    	   // To make dropdown actually work
-    	   // To make more unobtrusive: http://css-tricks.com/4064-unobtrusive-page-changer/
-          $("nav select").change(function() {
-            window.location = $(this).find("option:selected").val();
-          });
-
-    	 });
-    	</script>
-
-      <nav>
-
-      	<ul>
-          <li><a href="index.html">Home</a></li>&nbsp;&nbsp;
-          <li><a href="research.html">Research</a></li>&nbsp;&nbsp;
-          <li><a href="outreach.html">Outreach</a></li>&nbsp;&nbsp;
-          <li><a href="CV.html">CV</a></li>&nbsp;&nbsp;
-          <li><a href="personal.html">Personal</a></li>&nbsp;&nbsp;
-          <li><a href="contact.html">Contact</a></li>&nbsp;&nbsp;
-          <li><a href="upcoming.html"><i>Upcoming talks</i></a></li>&nbsp;&nbsp;
-
-        </ul>
-      </nav>
-          </head>
-
-
-  </header>
+<body>
 
 
 
@@ -160,7 +127,7 @@
       Nowadays, I am most likely to be found in my office in ATL 1259, but ever so often I tunnel out to enjoy a good play,
       concert, cr&egrave;me br&ucirc;l&eacute;e, or a volleyball game (I play on the Astronomy Department IM team Dirty Snowballs!)
       I grew up on the Adriatic coast (Herceg-Novi, Montenegro), which probably explains my love for water sports: I am an avid
-      swimmer and love everything sea-related. Early in the morning ~four times a week, you'll find me at the pool, swimming with the Terrapin Masters Team (our relay made <a href=https://www.usms.org/comp/tt/toptenrelaylist.php?Year=2019&CourseID=3&AgeGroupID=11&Sex=W&SwimmerID=02TVT> the 2nd best time in the US </a> for our age group in 2019!)
+      swimmer and love everything sea-related. You can find me at the pool multiple times a week, swimming with the Terrapin Masters Team (our relay made <a href=https://www.usms.org/comp/tt/toptenrelaylist.php?Year=2019&CourseID=3&AgeGroupID=11&Sex=W&SwimmerID=02TVT> the 2nd best time in the US </a> for our age group in 2019!)
       Other interests include reading, creative writing, spoken word, (programming and human) languages and linguistics,
       <a href="https://www.imo-official.org/problems.aspx">math puzzles</a>, NYT crossword puzzles, and drawing.
 
@@ -195,6 +162,15 @@ Below is a selection of photographs depicting ± who I am and how I got there, i
   </figcaption>
   </figure>
   <figure>
+  <img src="img/personal/terps.png" style="width:100%">
+  <figcaption style = "font-family: monospace;font-size:12px; LINE-HEIGHT:20px">
+    <i> Terrapin Masters Team at an away-meet in Worcester, MA: such amazing swimmers, such supportive friends! [Fall 2021]
+    </i>
+  </figcaption>
+  </figure>
+
+
+  <figure>
   <img src="img/personal/batur.jpg" style="width:100%">
   <figcaption style = "font-family: monospace;font-size:12px; LINE-HEIGHT:20px">
     <i> Although hiking is not my favorite passtime, I absolutely love spending time in nature. Here, a friend of mine and I
@@ -203,9 +179,9 @@ Below is a selection of photographs depicting ± who I am and how I got there, i
   </figcaption>
   </figure>
   <figure>
-<img src="img/personal/rose.jpg" style="width:100%">
+<img src="img/personal/boka.jpg" style="width:100%">
 <figcaption style = "font-family: monospace;font-size:12px; LINE-HEIGHT:20px">
-  <i> My favorite place in the whole entire world: Herceg Novi, Montenegro. This is where I grew up and in my free time I love to talk someone's ear off about how, objectively, it is the most beautiful place on our planet (and beyond). [Summer 2018]
+  <i> My favorite place in the whole entire world: Herceg Novi, Montenegro. This is where I grew up and in my free time I love to talk someone's ear off about how, objectively, it is the most beautiful place on our planet (and beyond). [Summer 2021]
   </i>
 </figcaption>
 </figure>
@@ -241,14 +217,19 @@ Below is a selection of photographs depicting ± who I am and how I got there, i
     </i>
   </figcaption>
   </figure>
+
+
+
+
+
   </div>
   <div class="column">
   <figure>
-  <img src="img/personal/ISL.jpg" style="width:100%">
+  <img src="img/personal/dive_SA.png" style="width:100%">
   <figcaption style = "font-family: monospace;font-size:12px; LINE-HEIGHT:20px">
-    <i> Crashing the International Swimming League (ISL) event at the Eppley Recreation Center at UMD after a 3600-m Postal Relay with the Terrapin Masters Team. Joining a community that
-      is completely independent from my (albeit amazing) astonomy department cohort has been very beneficial for my mental health and general well-being as a graduate student. On top of that,
-      what beats the bagel-place outings with my swim team after a long practice? Hardly anything. [Fall 2019]
+    <i> Swimming with the Terrapin Masters has provided me with a recreational and competative outlet
+      that is central to my well-being in graduate school; this time committment has become a non-negotiable
+      time block in my schedule. [PC: Courtney Randolph, Spring 2022]
     </i>
   </figcaption>
   </figure>
@@ -276,9 +257,11 @@ Below is a selection of photographs depicting ± who I am and how I got there, i
   </figcaption>
   </figure>
   <figure>
-  <img src="img/personal/swim.jpg" style="width:100%">
+  <img src="img/personal/arches.jpg" style="width:100%">
   <figcaption style = "font-family: monospace;font-size:12px; LINE-HEIGHT:20px">
-    <i> My first official open-water swim: three miles in 29.4°C (85°F) Chester River, MD. Might've missed a few flags, but here we are. [Summer 2019]
+    <i> Getting a driver's license during the COVID pandemic was probably one of the best things that I did---immediately
+      followed by a road trip through the U.S.---12 days, 10+ states, 100+ miles hiked, 100s of rocks climbed,
+      and 1000s of miles driven: here's a snapshot from the Arches National Park. [Fall 2021]
     </i>
   </figcaption>
   </figure>
@@ -289,6 +272,14 @@ Below is a selection of photographs depicting ± who I am and how I got there, i
     </i>
   </figcaption>
   </figure>
+</figure>
+<figure>
+<img src="img/personal/nationals.png" style="width:100%">
+<figcaption style = "font-family: monospace;font-size:12px; LINE-HEIGHT:20px">
+  <i> Signing the banner at my first US Masters Swimming Nationals in San Antonio, TX! [Spring 2022]
+  </i>
+</figcaption>
+</figure>
   </div>
 </div>
 </section>
