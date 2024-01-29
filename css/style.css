@@ -434,7 +434,29 @@ audio{
   overflow: hidden;
   background-color: #f1f1f1;
 }
+/*adding image containers for research*/
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+    gap: 20px; /* This creates space between images */
+}
 
+.responsive-image {
+    width: 60%;
+    max-width: 300px; /* Adjusted to make images smaller */
+    height: auto;
+    margin-bottom: 200px;
+    padding: 10px; /* Adds padding around images */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: Adds subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white; /* Background color for padding area */
+}
+
+.responsive-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
 
 /* Milena's additions */
 /* #container {
