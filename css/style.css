@@ -475,6 +475,7 @@ audio{
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
 }
 
 .publication-image {
@@ -490,6 +491,20 @@ audio{
 
 .publication-content p {
     font-size: 14px;
+}
+
+/* Class for image on the left (default) */
+.publication-left .publication-image {
+    margin-right: 15px;
+}
+
+/* Class for image on the right */
+.publication-right {
+    flex-direction: row-reverse;
+}
+
+.publication-right .publication-image {
+    margin-left: 15px;
 }
 
 .read-more-btn {
@@ -509,4 +524,5 @@ audio{
     color: white; /* Text color changes on hover */
     border-color: #800080; /* Dark pink border color on hover */
 }
+
 
