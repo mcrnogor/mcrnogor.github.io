@@ -135,27 +135,31 @@ detection, but provide limits and outlook for future instruments.</p>
 
 
 
-
-     <section class="copyright">
-       website &copy; M. Crnogorčević, January 2024
-
-     </section>
+<section class="copyright">website &copy; <span id="copyright-date"></span></section>
 
 
-
-     <!-- Bootstrap core JavaScript
-     ================================================== -->
-     <!-- Placed at the end of the document so the pages load faster -->
-     <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
 
 
 
-     <script type="text/javascript" src="js/main.js"></script>
-     <script type="text/javascript" src="js/jquery.fitvids.js"></script>
-     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery.fitvids.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    var currentDate = new Date();
+    var year = currentDate.getFullYear();
+    var months = ["January", "February", "March", "April", "May", "June", 
+                  "July", "August", "September", "October", "November", "December"];
+    var month = months[currentDate.getMonth()]; // Get the month as a string
 
-     <script>
+    // Combine month and year in the format "Month Year"
+    document.getElementById('copyright-date').textContent = `M.C. ${month} ${year}`;
+});
+</script>
 
-
-  </body>
- </html>
+ </body>
+</html>

@@ -100,9 +100,7 @@
     <a href="https://www.instagram.com/letters_to_mi/" class="fa fa-instagram"></a>
 
     </section>
-
-
-    <section class="copyright">&copy; M.C. January 2024</section>
+ <section class="copyright">website &copy; <span id="copyright-date"></span></section>
 
 
     <!-- Bootstrap core JavaScript
@@ -115,6 +113,18 @@
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/jquery.fitvids.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    var currentDate = new Date();
+    var year = currentDate.getFullYear();
+    var months = ["January", "February", "March", "April", "May", "June", 
+                  "July", "August", "September", "October", "November", "December"];
+    var month = months[currentDate.getMonth()]; // Get the month as a string
+
+    // Combine month and year in the format "Month Year"
+    document.getElementById('copyright-date').textContent = `M.C. ${month} ${year}`;
+});
+</script>
 
  </body>
 </html>

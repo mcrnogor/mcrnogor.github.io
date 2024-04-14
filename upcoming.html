@@ -68,19 +68,20 @@
 
 
   <p style = "font-family: monospace;font-size:15px; LINE-HEIGHT:20px; color:#FF5733">
-  <strong> [March 25-28, 2024; Time TBD]<br> <i>[invited talk]</i> <a href="https://conference.ippp.dur.ac.uk/event/1289/">Dark Matter Beyond the Weak Scale II, Durham University, UK</a> </strong> <br>
+  <strong> [April 24, 2024; 3 PM CEST]<br> <i>[invited talk, </i> <a href="docs/Poster_Crnogorcevic.pdf">COSMIC WISPers</a>]</strong> <br>
   </p>
   <p style = "font-family: monospace;font-size:15px; LINE-HEIGHT:20px">
-   [tentative title] Beyond the Visible: Astrophysical Searches for Dark Matter with Gamma Rays<br>
+   Title: WISPs, WIMPs, and Gammas: Searches for New Physics with the Fermi Large Area Telescope<br>
   <br>
   <br>
   </p>
 
   <p style = "font-family: monospace;font-size:15px; LINE-HEIGHT:20px; color:#FF5733">
-  <strong> [April 7-12, 2024; Time TBD]<br> <i>[invited talk, <a href="https://head.aas.org/">dissertation award finalist</a>]</i> <a href="https://aas.org/meetings/head21">The 21st Divisional Meeting of HEAD</a> </strong> <br>
+  <strong> [May 30, 2024; Time TBD]<br> <i>[invited talk, <a href="https://www.youtube.com/@sydneycppc">
+Sydney Consortium for Particle Physics and Cosmology (Sydney-CPPC) Colloquium</a>]</i> </strong> <br>
   </p>
   <p style = "font-family: monospace;font-size:15px; LINE-HEIGHT:20px">
-   New Messengers & New Physics: A Survey of the High-energy Universe<br>
+Title: TBD<br>
   <br>
   <br>
   </p>
@@ -166,8 +167,7 @@ Poster (presenter): Searching for Gamma-ray Counterparts to Gravitational-wave e
 
     </section>
 
-
-    <section class="copyright">&copy; M.C. January 2024</section>
+<section class="copyright">website &copy; <span id="copyright-date"></span></section>
 
 
     <!-- Bootstrap core JavaScript
@@ -180,6 +180,18 @@ Poster (presenter): Searching for Gamma-ray Counterparts to Gravitational-wave e
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/jquery.fitvids.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    var currentDate = new Date();
+    var year = currentDate.getFullYear();
+    var months = ["January", "February", "March", "April", "May", "June", 
+                  "July", "August", "September", "October", "November", "December"];
+    var month = months[currentDate.getMonth()]; // Get the month as a string
+
+    // Combine month and year in the format "Month Year"
+    document.getElementById('copyright-date').textContent = `M.C. ${month} ${year}`;
+});
+</script>
 
  </body>
 </html>

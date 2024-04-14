@@ -132,11 +132,9 @@ Click 'play' below for the correct pronounciation of my name. </i>
      </section>
 
 
-
-
      <section class="copyright">
          headshot photo &copy Marion D'Aurora <br>
-       website &copy; M. Crnogorčević, January 2024
+       website &copy; <span id="copyright-date"></span>
 
      </section>
 
@@ -152,7 +150,18 @@ Click 'play' below for the correct pronounciation of my name. </i>
      <script type="text/javascript" src="js/main.js"></script>
      <script type="text/javascript" src="js/jquery.fitvids.js"></script>
      <script src="js/bootstrap.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var currentDate = new Date();
+    var year = currentDate.getFullYear();
+    var months = ["January", "February", "March", "April", "May", "June", 
+                  "July", "August", "September", "October", "November", "December"];
+    var month = months[currentDate.getMonth()]; // Get the month as a string
 
+    // Combine month and year in the format "Month Year"
+    document.getElementById('copyright-date').textContent = `M.C. ${month} ${year}`;
+});
+</script>
 
   </body>
  </html>

@@ -66,7 +66,7 @@
 
 <section class="post-list post-content"><div class="post-data">
     <p style = "font-family: monospace;font-size:16px; LINE-HEIGHT:30px">
-Find my complete CV <a href="docs/MCrnogor_CV.pdf"target="_blank"> here</a> (last updated August 2023).
+Find my complete CV <a href="docs/MCrnogor_CV.pdf"target="_blank"> here</a> (last updated April 2024).
   <br> <br>
   <h4> <p style = "color:	#800040"> Professional Appointments </h4> </p>
   <p style = "font-family: monospace;font-size:15px; LINE-HEIGHT:20px">
@@ -114,7 +114,8 @@ Find my complete CV <a href="docs/MCrnogor_CV.pdf"target="_blank"> here</a> (las
     </section>
 
 
-    <section class="copyright">&copy; M.C. January 2024</section>
+    </section>
+ <section class="copyright">website &copy; <span id="copyright-date"></span></section>
 
 
     <!-- Bootstrap core JavaScript
@@ -127,6 +128,18 @@ Find my complete CV <a href="docs/MCrnogor_CV.pdf"target="_blank"> here</a> (las
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/jquery.fitvids.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    var currentDate = new Date();
+    var year = currentDate.getFullYear();
+    var months = ["January", "February", "March", "April", "May", "June", 
+                  "July", "August", "September", "October", "November", "December"];
+    var month = months[currentDate.getMonth()]; // Get the month as a string
+
+    // Combine month and year in the format "Month Year"
+    document.getElementById('copyright-date').textContent = `M.C. ${month} ${year}`;
+});
+</script>
 
  </body>
 </html>
