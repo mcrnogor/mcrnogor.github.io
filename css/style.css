@@ -443,11 +443,12 @@ audio{
     gap: 20px; /* This creates space between images */
 }
 
+/* Base styles (keep these as they are) */
 .responsive-image {
     width: 40%;
     max-width: 200px; /* Adjusted to make images smaller */
     height: auto;
-    margin-bottom: 200px;
+    margin-bottom: 200px; /* Significant bottom margin */
     padding: 15px; /* Adds padding around images */
     border-radius: 15px; /* Rounded corners */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: Adds subtle shadow */
@@ -458,6 +459,16 @@ audio{
 .responsive-image:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Media Query for smaller screens, typically phones */
+@media only screen and (max-width: 700px) {
+    .responsive-image {
+        width: 80%; /* Increase width to use more screen space */
+        max-width: none; /* Remove max-width restriction */
+        margin-bottom: 20px; /* Reduce the bottom margin for more compact layout */
+        padding: 10px; /* Slightly reduce padding */
+    }
 }
 
 .publications {
@@ -561,3 +572,5 @@ font-family: monospace;
   background-color: #ddd;
   color: #000;
 }
+
+
