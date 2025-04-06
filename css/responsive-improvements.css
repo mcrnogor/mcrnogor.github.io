@@ -1,0 +1,192 @@
+/* Enhanced responsive design improvements */
+
+/* Fix for HTML and body elements */
+html, body {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling on mobile */
+}
+
+/* Improved container width for all screen sizes */
+.header-block, .post-list, .footer, .copyright {
+    width: 90%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+/* Fix for dropdown menu on mobile devices */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 100; /* Ensure dropdowns appear above other content */
+}
+
+.dropdown-content {
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 101;
+}
+
+/* Touch-friendly dropdown for mobile */
+@media (max-width: 768px) {
+    .dropdown-content {
+        position: static;
+        display: none;
+        width: 100%;
+        background-color: #f9f9f9;
+        box-shadow: none;
+        margin-top: 5px;
+    }
+    
+    .dropdown-content a {
+        padding: 15px; /* Larger touch targets */
+        border-bottom: 1px solid #eee;
+    }
+    
+    /* JavaScript will toggle this class */
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+    
+    /* Convert dropbtn to be clickable on mobile */
+    .dropbtn {
+        cursor: pointer;
+        padding: 10px;
+        display: inline-block;
+    }
+}
+
+/* Responsive sidebar */
+@media (max-width: 992px) {
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        padding: 0;
+        left: 0;
+        top: 0;
+    }
+    
+    .sidebar h3 {
+        padding: 10px;
+    }
+    
+    .sidebar a {
+        padding: 12px;
+    }
+}
+
+/* Responsive images and publications */
+@media only screen and (max-width: 768px) {
+    .responsive-image {
+        width: 90%;
+        max-width: none;
+        margin-bottom: 15px;
+    }
+    
+    .publication {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .publication-image {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 0 15px 0;
+    }
+    
+    .publication-right {
+        flex-direction: column;
+    }
+    
+    .publication-right .publication-image {
+        margin: 0 0 15px 0;
+    }
+}
+
+/* Improved typography for mobile */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+    
+    .blog-title h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+    
+    .post-content {
+        font-size: 16px;
+        line-height: 2.5rem;
+        padding: 20px 10px;
+    }
+    
+    .footer, .copyright {
+        width: 90%;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+    
+    .blog-title h1 {
+        font-size: 24px;
+    }
+    
+    .post-content {
+        font-size: 15px;
+        line-height: 2.2rem;
+        padding: 15px 10px;
+    }
+    
+    .fa {
+        padding: 15px;
+        font-size: 0.9em;
+        width: 40px;
+    }
+}
+
+/* Fix for navigation on mobile */
+@media (max-width: 768px) {
+    nav {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .header-block .col-md-12 {
+        text-align: center;
+    }
+    
+    .header-block a, .dropdown {
+        display: inline-block;
+        margin: 5px;
+    }
+}
+
+/* Accessibility improvements */
+a:focus, button:focus, .dropbtn:focus {
+    outline: 2px solid #17bed2;
+}
+
+/* Improved touch targets for mobile */
+@media (max-width: 768px) {
+    a, button, .dropbtn {
+        padding: 10px;
+        margin: 2px;
+    }
+    
+    .header-block a {
+        padding: 8px;
+        display: inline-block;
+    }
+}
