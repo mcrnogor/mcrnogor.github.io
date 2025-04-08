@@ -1,0 +1,60 @@
+.arxiv-btn, .alphaxiv-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: #f8f8f8;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 1px solid;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    font-size: 14px;
+}
+
+.arxiv-btn {
+    color: #b31b1b;
+    border-color: #b31b1b;
+}
+
+.alphaxiv-btn {
+    color: #008080;
+    border-color: #008080;
+}
+
+.arxiv-btn:hover {
+    background-color: #b31b1b;
+    color: white !important;
+    border-color: #b31b1b;
+}
+
+.alphaxiv-btn:hover {
+    background-color: #008080;
+    color: white !important;
+    border-color: #008080;
+}
+
+/* Dark theme support */
+[data-theme="dark"] .arxiv-btn, 
+[data-theme="dark"] .alphaxiv-btn {
+    background-color: #222;
+}
+
+[data-theme="dark"] .arxiv-btn {
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+[data-theme="dark"] .alphaxiv-btn {
+    color: #66cccc;
+    border-color: #66cccc;
+}
+
+[data-theme="dark"] .arxiv-btn:hover {
+    background-color: #ff6b6b;
+    color: #222;
+}
+
+[data-theme="dark"] .alphaxiv-btn:hover {
+    background-color: #66cccc;
+    color: #222;
+}

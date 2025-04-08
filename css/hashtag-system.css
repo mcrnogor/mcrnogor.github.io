@@ -1,0 +1,95 @@
+.hashtag {
+    display: inline-block;
+    padding: 2px 6px;
+    margin: 2px;
+    font-size: 13px;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    color: #888;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+}
+
+.hashtag:hover {
+    background-color: #f0f0f0;
+    color: #800080;
+    border-color: #800080;
+}
+
+.hashtag-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Dark theme support for hashtags */
+[data-theme="dark"] .hashtag {
+    background-color: #222;
+    color: #aaa;
+    border-color: #444;
+}
+
+[data-theme="dark"] .hashtag:hover {
+    background-color: #333;
+    color: #ff9cee;
+    border-color: #ff9cee;
+}
+
+.publication {
+    transition: opacity 0.3s ease;
+}
+
+.publication.filtered-out {
+    display: none;
+}
+
+.reset-filters {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 10px auto;
+    background-color: #f8f8f8;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.reset-filters:hover {
+    background-color: #eaeaea;
+}
+
+[data-theme="dark"] .reset-filters {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+[data-theme="dark"] .reset-filters:hover {
+    background-color: #3a3a3a;
+}
+
+.filters-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.active-filter {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 5px;
+    background-color: #800080;
+    color: white;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+[data-theme="dark"] .active-filter {
+    background-color: #ff9cee;
+    color: #121212;
+}
