@@ -158,35 +158,27 @@ we provide the first upper limits on the neutrino flux produced by the unresolve
         <a href="mailto:milena.crnogorcevic@fysik.su.se" class="fa fa-envelope"></a>
         <a href="https://www.instagram.com/letters_to_mi/" class="fa fa-instagram"></a>
     </section>
-   
-
-<section class="copyright">website &copy; <span id="copyright-date"></span></section>
-
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
-
-
-
-<script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/jquery.fitvids.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/mobile-menu.js"></script>
-<script type="text/javascript" src="js/theme-toggle.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-var currentDate = new Date();
-var year = currentDate.getFullYear();
-var months = ["January", "February", "March", "April", "May", "June", 
-              "July", "August", "September", "October", "November", "December"];
-var month = months[currentDate.getMonth()]; // Get the month as a string
-
-// Combine month and year in the format "Month Year"
-document.getElementById('copyright-date').textContent = `M.C. ${month} ${year}`;
-});
-</script>
-
+    
+    <section class="copyright">website &copy; <span id="copyright-date"></span></section>
+    
+    <!-- JavaScript files -->
+    <script type="text/javascript" src="../js/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/mobile-menu.js"></script>
+    <script type="text/javascript" src="../js/theme-toggle.js"></script>
+    <script type="text/javascript" src="../js/hashtag-system.js"></script>
+    
+    <!-- Theme toggle button -->
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="icon-moon">🌙</span>
+        <span class="icon-sun">☀️</span>
+    </button>
+    
+    <script>
+        // Set copyright year
+        document.getElementById('copyright-date').textContent = `M.C. ${month} ${year}`;
+    </script>
 </body>
 </html>
