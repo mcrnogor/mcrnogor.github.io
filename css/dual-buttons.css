@@ -1,4 +1,4 @@
-.arxiv-btn, .alphaxiv-btn {
+.arxiv-btn, .alphaxiv-btn, .audio-btn {
     display: inline-block;
     padding: 6px 12px;
     margin-top: 10px;
@@ -21,6 +21,11 @@
     border-color: #008080;
 }
 
+.audio-btn {
+    color: #6a0dad;
+    border-color: #6a0dad;
+}
+
 .arxiv-btn:hover {
     background-color: #b31b1b;
     color: white !important;
@@ -33,9 +38,16 @@
     border-color: #008080;
 }
 
+.audio-btn:hover {
+    background-color: #6a0dad;
+    color: white !important;
+    border-color: #6a0dad;
+}
+
 /* Dark theme support */
 [data-theme="dark"] .arxiv-btn, 
-[data-theme="dark"] .alphaxiv-btn {
+[data-theme="dark"] .alphaxiv-btn,
+[data-theme="dark"] .audio-btn {
     background-color: #222;
 }
 
@@ -49,12 +61,25 @@
     border-color: #66cccc;
 }
 
+[data-theme="dark"] .audio-btn {
+    color: #b388ff;
+    border-color: #b388ff;
+}
+
 [data-theme="dark"] .arxiv-btn:hover {
     background-color: #ff6b6b;
     color: #222;
+    border-color: #ff6b6b;
 }
 
 [data-theme="dark"] .alphaxiv-btn:hover {
     background-color: #66cccc;
     color: #222;
+    border-color: #66cccc;
+}
+
+[data-theme="dark"] .audio-btn:hover {
+    background-color: #b388ff;
+    color: #222;
+    border-color: #b388ff;
 }
