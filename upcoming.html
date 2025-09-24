@@ -1,40 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3F92GY58E0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3F92GY58E0');
-</script>
-   <body>
-
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3F92GY58E0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-3F92GY58E0');
+    </script>
+    
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-
-    <title> Milena Crnogorčević</title>
-    <meta name="description"
-    content="Milena a Postdoctoral Fellow at the Oskar Klein Centre, interested in high-energy astroparticle physics. She is currently working on indirect dark matter searches using data from NASA's Fermi Gamma-ray Space Telescope.
-    She is also involved in multimessenger efforts."
-
+    <title>Milena Crnogorčević - Talks</title>
+    <meta name="description" content="Milena a Postdoctoral Fellow at the Oskar Klein Centre, interested in high-energy astroparticle physics. She is currently working on indirect dark matter searches using data from NASA's Fermi Gamma-ray Space Telescope. She is also involved in multimessenger efforts.">
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    
     <link rel="shortcut icon" href="">
-
     <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Radley:400,400italic' rel='stylesheet' type='text/css'>
-
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/responsive-improvements.css">
     <link rel="stylesheet" type="text/css" href="css/dark-theme.css">
-
+    
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -42,177 +32,587 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    
     <style>
-    h2 {text-align:center;}
+        h2 {text-align:center; font-size: 28px; margin-bottom: 35px;}
+        .talks-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .talk-entry {
+            margin-bottom: 18px;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .talk-date {
+            font-size: 14px;
+            color: #666;
+            font-family: monospace;
+            margin-bottom: 6px;
+        }
+        .talk-title {
+            font-family: 'Radley', serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+        .talk-date a {
+            color: #0066cc;
+            text-decoration: none !important;
+        }
+        .talk-date a:hover {
+            text-decoration: underline !important;
+        }
+        .talk-title a {
+            color: #0066cc;
+            text-decoration: none !important;
+        }
+        .talk-title a:hover {
+            text-decoration: underline !important;
+        }
+        .invited-tag {
+            color: #FF5733;
+            font-size: 12px;
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .future-talk {
+            background-color: rgba(255, 87, 51, 0.04);
+            border-left: 2px solid #FF5733;
+            padding-left: 12px;
+        }
+        .year-divider {
+            margin: 30px 0 25px 0;
+            text-align: center;
+            font-size: 18px;
+            color: #999;
+            font-weight: 300;
+        }
+
+        /* Dark theme styles */
+        @media (prefers-color-scheme: dark) {
+            h2 {
+                color: #e0e0e0;
+            }
+            .talk-entry {
+                border-bottom: 1px solid #444;
+            }
+            .talk-date {
+                color: #aaa;
+            }
+            .talk-title {
+                color: #e0e0e0;
+            }
+            .talk-title a {
+                color: #66b3ff;
+            }
+            .talk-title a:hover {
+                color: #99ccff;
+            }
+            .invited-tag {
+                color: #ff7755;
+            }
+            .future-talk {
+                background-color: rgba(255, 87, 51, 0.08);
+                border-left: 2px solid #ff7755;
+            }
+            .year-divider {
+                color: #888;
+            }
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .talks-container {
+                max-width: 100%;
+                padding: 0 15px;
+            }
+            
+            h2 {
+                font-size: 24px;
+                margin-bottom: 25px;
+            }
+            
+            .talk-entry {
+                margin-bottom: 20px;
+                padding: 12px 0;
+            }
+            
+            .talk-date {
+                font-size: 13px;
+                margin-bottom: 8px;
+                line-height: 1.4;
+            }
+            
+            .talk-title {
+                font-size: 15px;
+                line-height: 1.4;
+            }
+            
+            .invited-tag {
+                font-size: 11px;
+            }
+            
+            .year-divider {
+                font-size: 16px;
+                margin: 25px 0 20px 0;
+            }
+            
+            .future-talk {
+                padding-left: 8px;
+                margin-left: -8px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .talks-container {
+                padding: 0 10px;
+            }
+            
+            h2 {
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+            
+            .talk-entry {
+                margin-bottom: 18px;
+                padding: 10px 0;
+            }
+            
+            .talk-date {
+                font-size: 12px;
+                margin-bottom: 6px;
+            }
+            
+            .talk-title {
+                font-size: 14px;
+                line-height: 1.3;
+            }
+            
+            .invited-tag {
+                font-size: 10px;
+            }
+            
+            .year-divider {
+                font-size: 15px;
+                margin: 20px 0 15px 0;
+            }
+            
+            .future-talk {
+                padding-left: 6px;
+                margin-left: -6px;
+            }
+        }
+        html.dark-theme h2,
+        html.dark-theme .talk-title,
+        html.dark-theme .talk-date,
+        html.dark-theme .year-divider,
+        html.dark-theme .invited-tag,
+        body.dark-theme h2,
+        body.dark-theme .talk-title, 
+        body.dark-theme .talk-date,
+        body.dark-theme .year-divider,
+        body.dark-theme .invited-tag,
+        .dark-theme h2,
+        .dark-theme .talk-title,
+        .dark-theme .talk-date, 
+        .dark-theme .year-divider,
+        .dark-theme .invited-tag,
+        [data-theme="dark"] h2,
+        [data-theme="dark"] .talk-title,
+        [data-theme="dark"] .talk-date,
+        [data-theme="dark"] .year-divider,
+        [data-theme="dark"] .invited-tag {
+            color: #e0e0e0 !important;
+        }
+        
+        html.dark-theme .talk-date,
+        body.dark-theme .talk-date,
+        .dark-theme .talk-date,
+        [data-theme="dark"] .talk-date {
+            color: #aaa !important;
+        }
+        
+        html.dark-theme .year-divider,
+        body.dark-theme .year-divider,
+        .dark-theme .year-divider,
+        [data-theme="dark"] .year-divider {
+            color: #888 !important;
+        }
+        
+        html.dark-theme .invited-tag,
+        body.dark-theme .invited-tag,
+        .dark-theme .invited-tag,
+        [data-theme="dark"] .invited-tag {
+            color: #ff7755 !important;
+        }
+
+        html.dark-theme .talk-entry,
+        body.dark-theme .talk-entry,
+        .dark-theme .talk-entry,
+        [data-theme="dark"] .talk-entry {
+            border-bottom: 1px solid #444 !important;
+        }
+
+        html.dark-theme .talk-title a,
+        body.dark-theme .talk-title a,
+        .dark-theme .talk-title a,
+        [data-theme="dark"] .talk-title a {
+            color: #66b3ff !important;
+        }
+        
+        html.dark-theme .talk-title a:hover,
+        body.dark-theme .talk-title a:hover,
+        .dark-theme .talk-title a:hover,
+        [data-theme="dark"] .talk-title a:hover {
+            color: #99ccff !important;
+        }
+
+        html.dark-theme .future-talk,
+        body.dark-theme .future-talk,
+        .dark-theme .future-talk,
+        [data-theme="dark"] .future-talk {
+            background-color: rgba(255, 87, 51, 0.08) !important;
+            border-left: 2px solid #ff7755 !important;
+        }
     </style>
-
-
-<header class="header-block row">
-  <div class="blog-title">
-    <h1>milena crnogorčević
-    </h1>
-    <div class="col-md-12">
-      <a href="index.html">Home</a>&nbsp;&nbsp;
-      <div class="dropdown">
-      <div class="dropbtn">⋮ Research &nbsp;&nbsp;</div>
-      <div class="dropdown-content">
-        <a href="research.html">Projects</a>
-        <a href="upcoming.html"><i>Upcoming talks</i></a>
-      </div>
-      </div>
-    <div class="dropdown">
-    <div class="dropbtn">⋮ About me &nbsp;&nbsp;</div>
-     <div class="dropdown-content">
-        <a href="CV.html">CV</a>
-        <a href="outreach.html">Outreach</a>
-        <a href="personal.html">Personal</a></li>&nbsp;&nbsp;
-      </div>
-    </div>
-     <a href="fig-sag.html">FIG-SAG</a>&nbsp;&nbsp;
-     <a href="contact.html">Contact</a>&nbsp;&nbsp;
-    </div>
-  </header>
+</head>
 
 <body>
+    <header class="header-block row">
+        <div class="blog-title">
+            <h1>milena crnogorčević </h1>
+            <div class="col-md-12">
+                <a href="index.html">Home</a>&nbsp;&nbsp;
+                <div class="dropdown">
+                    <div class="dropbtn">⋮ Research &nbsp;&nbsp;</div>
+                    <div class="dropdown-content">
+                        <a href="research.html">Projects</a>
+                        <a href="talks.html"><i>Talks</i></a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <div class="dropbtn">⋮ About me &nbsp;&nbsp;</div>
+                    <div class="dropdown-content">
+                        <a href="CV.html">CV</a>
+                        <a href="outreach.html">Outreach</a>
+                        <a href="personal.html">Personal</a>
+                    </div>
+                </div>
+                <a href="fig-sag.html">FIG-SAG</a>&nbsp;&nbsp;
+                <a href="contact.html">Contact</a>&nbsp;&nbsp;
+            </div>
+        </div>
+    </header>
 
-<section class="post-list post-content"><div class="post-data">
+    <section class="post-list post-content">
+        <div class="talks-container">
+            <h2>Talks & Presentations</h2>
 
-  <p style = "font-family: monospace;font-size:15px; LINE-HEIGHT:20px; color:#FF5733">
-  <strong> [June 23-27, 2025] <i>Axions in Stockholm 2025</strong> <br>
-  </p>
-  <p style = "font-family: monospace;font-size:15px; LINE-HEIGHT:20px">[TBA] <a href="https://indico.fysik.su.se/event/8808/">Gamma-ray Windows into the Axion Landscape: Current Status and Future Prospects</a>, invited talk<br>
-  <br>
-  <br>
-  </p>
+            <!-- Future Talks -->
+            <div class="year-divider">Upcoming</div>
+            
+            <div class="talk-entry future-talk">
+                <div class="talk-date">October 2025 • Erlangen, Germany • <a href="https://ecap.nat.fau.de/indexphp/news-and-events/seminar/">ECAP Seminar</a></div>
+                <div class="talk-title"><span class="invited-tag">invited</span> Dark Matter from the Littlest Galaxies: Gamma-ray Insights from Ultra-Faint Dwarfs and IMBHs</div>
+            </div>
 
+            <!-- 2025 Talks -->
+            <div class="year-divider">2025</div>
 
-  <p style = "font-family: monospace;font-size:15px; LINE-HEIGHT:20px; color:#FF5733">
-  <strong> [July 14-24, 2025] <i>ICRC 2025, Geneva</i></strong> <br>
-  </p>
-  <p style = "font-family: monospace;font-size:15px; LINE-HEIGHT:20px">
-         <br>
-   - [July 17, 2025] <a href= "https://indico.cern.ch/event/1258933/contributions/6477275/">Envisioning the Future of Gamma-Ray Astronomy in Space</a>, invited talk
-     <br>
-     <br>
-   - [July 18, 2025] <a href= "https://indico.cern.ch/event/1258933/contributions/6491167/">Dark Matter from the Littlest Galaxies: Gamma-ray Insights from Ultra-Faint Dwarfs and IMBHs</a>, talk
-     <br>
-     <br>
-   - [July 14-24, 2025] <a href= "https://indico.cern.ch/event/1258933/contributions/6510177/">Galaxy Clusters Revisited: New Gamma-ray Limits on Dark Matter Prompt Cusps </a>, poster
-      <br>
-     <br>
-   - [July 24, 2025] <a href= "https://indico.cern.ch/event/1258933/contributions/6562480/">Rapporteur talk DM </a>, invited talk
-  <br>
-  </p>
+            <div class="talk-entry">
+                <div class="talk-date">July 2025 • Geneva, Switzerland • <a href="https://indico.cern.ch/event/1258933/">ICRC 2025 </a></div>
+                <div class="talk-title"><span class="invited-tag">invited</span> <a href="talks/2025/ICRC2025_rapporteur.pdf">Dark Matter Rapporteur Talk</a></div>
+            </div>
 
+            <div class="talk-entry">
+                <div class="talk-date">July 2025 • Geneva, Switzerland • <a href="https://indico.cern.ch/event/1258933/">ICRC 2025 </a></div>
+                <div class="talk-title"><span class="invited-tag">invited</span> <a href="talks/2025/ICRC2025_figsag.pdf">Envisioning the Future of Gamma-Ray Astronomy in Space: Overview of NASA's FIG SAG Effort</a></div>
+            </div>
 
-<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387145.8666616757!2d-74.25819524498877!3d40.70531098717965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1500524479977" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
-<br/> -->
-<!-- <p style = "font-family: monospace;font-size:15px; LINE-HEIGHT:20px">
-<b> This fall (2022), I am applying for postdoc positions </b> in the field of high-energy astroparticle physics, with a focus on indirect dark matter searches and transient astronomy. <br>
-If your institution has an opening and you are interested in collaboration, please do not hesitate to reach out at <a href="mailto:mcrnogor@umd.edu"> mcrnogor(at)umd(dot)edu</a></b> or say hi at any of the conferences/talks listed below.
-</p>
-<br> -->
+            <div class="talk-entry">
+                <div class="talk-date">July 2025 • Geneva, Switzerland • <a href="https://indico.cern.ch/event/1258933/">ICRC 2025 </a></div>
+                <div class="talk-title"><a href="talks/2025/ICRC2025_dwarfAGN.pdf">Dark Matter from the Littlest Galaxies: Gamma-ray Insights from Ultra-Faint Dwarfs and IMBHs</a></div>
+            </div>
 
+            <div class="talk-entry">
+                <div class="talk-date">July 2025 • Stockholm, Sweden • <a href="https://indico.fysik.su.se/event/8808/">Axions in Stockholm 2025</a></div>
+                <div class="talk-title"><span class="invited-tag">invited</span> <a href="talks/2025/stockholm2025.pdf">Gamma-ray Windows into the Axion Landscape: Current Status and Future Prospects</a></div>
+            </div>
 
-<!-- <p style = "font-family: monospace;font-size:15px; LINE-HEIGHT:20px; color:#FF5733">
-<strong> [February 17, 2023; 11 AM EST]<br> <i>[invited talk]</i> SED Director's Seminar, NASA Goddard Space Flight Center </strong> <br>
-</p>
-<p style = "font-family: monospace;font-size:15px; LINE-HEIGHT:20px">
- <a href="https://science.gsfc.nasa.gov/sed/calendar/showevent.cfm?CalID=8749">Beyond the Visible: New Messengers and New Physics</a>
-<br>
-<br>
-<br>
-</p>
+            <div class="talk-entry">
+                <div class="talk-date">May 2025 • Paris, France • <a href="https://indico.math.cnrs.fr/event/12305/overview">Dark Matter and Neutrinos Workshop</a></div>
+                <div class="talk-title"><a href="talks/2025/paris2025.pdf">From Gamma Rays to Multimessenger Dark Matter Searches: Establishing Fermi-LAT's Legacy</a></div>
+            </div>
 
+            <div class="talk-entry">
+                <div class="talk-date">March 2025 • Stockholm, Sweden • <a href="https://indico.fysik.su.se/event/9165/">Oskar Klein Centre Colloquium</a></div>
+                <div class="talk-title"><span class="invited-tag">invited</span> <a href="talks/2025/stockholm2025.pdf">A Gamma-ray Window into the Dark Matters of the Universe: Establishing Fermi-LAT’s Legacy</a></div>
+            </div>
 
-<p style = "font-family: monospace;font-size:15px; LINE-HEIGHT:20px; color:#FF5733">
-<strong> [April 5, 2023; 4 PM EST]<br> <i>[invited talk]</i> Center for Neutrino Physics Seminar, Virginia Tech </strong> <br>
-</p>
-<p style = "font-family: monospace;font-size:15px; LINE-HEIGHT:20px">
-<a href="https://www.phys.vt.edu/Newsandevents/talks/NeutrinoPhysicsSeminar.html">Beyond the Visible: New Messengers and New Physics</a><br>
-<br>
-<br>
-</p> -->
+            <div class="talk-entry">
+                <div class="talk-date">February 2025 • Sydney, Australia (online) • <a href="https://www.sydney-cppc.org/">CPPC Seminar</a></div>
+                <div class="talk-title"><span class="invited-tag">invited</span> <a href="talks/2025/sydney2025.pdf">The Dark Matters of the Universe with Fermi-LAT,</a> <a href="https://www.youtube.com/watch?v=rnXj04kQQco">video</a></div>
+            </div>
 
-<!-- <p style = "font-family: monospace;font-size:15px; LINE-HEIGHT:20px; color:	#800040">
-<strong> [September 12, 2023, 3:30]<br> TeVPA 2023, Napoli </strong> <br>
-</p>
-<p style = "font-family: monospace;font-size:15px; LINE-HEIGHT:20px; color:	#5733FF">
-<strong> <a href="https://agenda.infn.it/event/33457/contributions/204702/">New Physics through a Multimessenger Lens: Searching for Axion-like Particles from Transient Astrophysical Events </strong> </a> <br>
-</p>
-<br>
-<br>
-</p> -->
+            <!-- 2024 Talks -->
+            <div class="year-divider">2024</div>
+            
+            <div class="talk-entry">
+                <div class="talk-date">September 2024 • College Park, Maryland • <a href="https://fermi.gsfc.nasa.gov/science/mtgs/symposia/eleventh/"> 11th Fermi Symposium</a></div>
+                <div class="talk-title"><span class="invited-tag">invited</span> <a href="talks/2024/maryland2024.pdf">Fermi Listens for WISPers: Past, Present, and Future of Fermi's Axion-like Particle Searches</a> (plenary)</div>
+            </div>
 
+            <div class="talk-entry">
+                <div class="talk-date">September 2024 • Chicago, Illinois • <a href="https://indico.uchicago.edu/event/427/">TeVPA 2024</a></div>
+                <div class="talk-title"><a href="talks/2024/tevpa2024_dwarfAGN.pdf">Dark Matter from Intermediate-Mass Black Holes with Fermi-LAT</a></div>
+            </div>
 
+            <div class="talk-entry">
+                <div class="talk-date">September 2024 • Chicago, Illinois • <a href="https://indico.uchicago.edu/event/427/">TeVPA 2024</a></div>
+                <div class="talk-title"><a href="talks/2024/tevpa2024_figsag.pdf">Envisioning the Future of Gamma-Ray Astronomy in Space: Overview of NASA's FIG SAG Effort</a></div>
+            </div>
 
-<!-- <strong> Click <a href="https://meetings.aps.org/Meeting/APR22/Session/W14.1">[here]</a> for more info. </strong> <br>
-<br>
-Poster (presenter): Searching for Gamma-ray Counterparts to Gravitational-wave events with <i>Fermi</i>-GBM and <i>Swift</i>-BAT<br>
-<strong> Click <a href="https://meetings.aps.org/Meeting/APR22/Session/S17.31">[here]</a> for more info. </strong> <br>
-</p>
-<br> -->
+            <div class="talk-entry">
+                <div class="talk-date">August 2024 • Istanbul, Turkey • <a href="https://agenda.infn.it/event/39939/overview">2nd General Meeting of COST Action COSMIC WISPers</a></div>
+                <div class="talk-title"><span class="invited-tag">invited</span> <a href="talks/2024/istanbul2024.pdf">WISPs, WIMPs, and Gammas: Searches for New Physics with the Fermi Large Area Telescope</a></div>
+            </div>
 
-<!-- <p style = "font-family: monospace;font-size:15px; LINE-HEIGHT:20px; color:#FF5733">
-<strong> [July 25 - 29, 2022] The 27th European Cosmic Ray Symposium, Nijmegen, Netherlands </strong> <br>
-</p>
-<p style = "font-family: monospace;font-size:15px; LINE-HEIGHT:20px">
-<i>[tentative]</i> Oral presentation: Searching for axion-like particles from core-collapse supernovae: <i> Fermi</i> LLE and GRB precursor emission<br>
-</p> -->
+            <div class="talk-entry">
+                <div class="talk-date">April 2024 • online • <a href="https://inspirehep.net/seminars/2780235">COSMIC WISPers Colloquium</a></div>
+                <div class="talk-title"><span class="invited-tag">invited</span> <a href="talks/2024/wispers2024.pdf">WISPs, WIMPs, and Gammas: Searches for New Physics with the Fermi Large Area Telescope,</a><a href="https://www.youtube.com/watch?v=rnXj04kQQco">video</a></div>
+            </div>
 
+            <div class="talk-entry">
+                <div class="talk-date">April 2024 • Horseshoe Bay, Texas • <a href="https://aas.org/meetings/head21">HEAD21</a></div>
+                <div class="talk-title"><span class="invited-tag">invited</span> <a href="talks/2024/head2024.pdf">New Messengers & New Physics: A Survey of the High-energy Universe</a> (Dissertation Award Finalist)</div>
+            </div>
 
+            <div class="talk-entry">
+                <div class="talk-date">March 2024 • Durham, United Kingdom • <a href="https://conference.ippp.dur.ac.uk/event/1289/overview">Beyond WIMPs Workshop</a></div>
+                <div class="talk-title"><span class="invited-tag">invited</span> <a href="talks/2024/durham2024.pdf">Astrophysical Probes of Dark Matter: Past, Present, and Future of Gamma-ray Observations</a> (plenary)</div>
+            </div>
 
-</p>
-
-
-
-
-</section>
-
-<section class="footer">
-  <span style="float:center; font-family:'Montserrat', sans-serif;font-size:12px;">
-    <small><a href="index.html" style="color:#1F315D">English</a> &nbsp;&nbsp; <a href="index_serbian.html" style="color:#1F315D">srpski</a> &nbsp;&nbsp;<a href="index_italian.html" style="color:#1F315D">italiano</a></small>
-</span>
-<br><br>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <div class="talk-entry">
 
 
-    <!-- Add font awesome icons -->
-    <a href="https://www.linkedin.com/in/milena-crnogorčević-924034204" class="fa fa-linkedin"></a>
-    <a href="https://github.com/mcrnogor" class="fa fa-github"></a>
-    <a href="mailto:milena.crnogorcevic@fysik.su.se" class="fa fa-envelope"></a>
-    <a href="https://www.instagram.com/letters_to_mi/" class="fa fa-instagram"></a>
+            <!-- 2023 Talks -->
+            <div class="year-divider">2023</div>
+            
+            <div class="talk-entry">
+                <div class="talk-date">September 2023 • online • Fermi-LAT Collaboration Meeting</div>
+                <div class="talk-title"><span class="invited-tag">invited</span> DEI Work in Science Positions (panelist)</div>
+            </div>
 
+            <div class="talk-entry">
+                <div class="talk-date">September 2023 • Naples, Italy • <a href="https://agenda.infn.it/event/33457/">TeVPA 2023</a></div>
+                <div class="talk-title"><a href="talks/2023/tevpa2023.pdf">New physics through a multimessenger lens: searching for axion-like particles from transient astrophysical events</a></div>
+            </div>
+
+            <div class="talk-entry">
+                <div class="talk-date">April 2023 • Blacksburg, Virginia • Center for Neutrino Physics, VT</div>
+                <div class="talk-title"><span class="invited-tag">invited</span>New Physics through a Multimessenger Lens</div>
+            </div>
+
+            <div class="talk-entry">
+                <div class="talk-date">February 2023 • Goddard, Maryland • SED Colloquium</div>
+                <div class="talk-title"><span class="invited-tag">invited</span> Beyond the Visible: New Messengers and New Physics</div>
+            </div>
+
+            <div class="talk-entry">
+                <div class="talk-date">January 2023 • AAS 241, Seattle</div>
+                <div class="talk-title">New physics through a multimessenger lens: searching for axion-like particles from transient astrophysical events (dissertation)</div>
+            </div>
+
+            <!-- 2022 Talks -->
+            <div class="year-divider">2022</div>
+            
+            <div class="talk-entry">
+                <div class="talk-date">December 2022 • Columbia University</div>
+                <div class="talk-title"><span class="invited-tag">invited</span> Fermi Mentoring Program: lessons learned from near and far</div>
+            </div>
+
+            <div class="talk-entry">
+                <div class="talk-date">December 2022 • Columbia University</div>
+                <div class="talk-title"><span class="invited-tag">invited</span> Light at the End of the Tunnel: Searching for Axion-like Particles in Gamma-ray Energies</div>
+            </div>
+
+            <div class="talk-entry">
+                <div class="talk-date">October 2022 • Stanford University</div>
+                <div class="talk-title"><span class="invited-tag">invited</span> Light at the End of the Tunnel: Searching for Axion-like Particles in Gamma-ray Energies</div>
+            </div>
+
+            <div class="talk-entry">
+                <div class="talk-date">September 2022 • Ohio State University</div>
+                <div class="talk-title"><span class="invited-tag">invited</span> New Physics through a Multimessenger Lens: an Exploration of the High-energy Universe</div>
+            </div>
+
+            <div class="talk-entry">
+                <div class="talk-date">September 2022 • University of Wisconsin, Madison</div>
+                <div class="talk-title"><span class="invited-tag">invited</span> Astrophysical searches for axion-like particles in gamma-ray energies & multimessenger studies of the high-energy Universe</div>
+            </div>
+
+            <div class="talk-entry">
+                <div class="talk-date">August 2022 • TeVPA, Kingston</div>
+                <div class="talk-title">Searching for Axionlike Particles from Gamma-ray Bursts with Fermi</div>
+            </div>
+
+            <div class="talk-entry">
+                <div class="talk-date">August 2022 • TeVPA, Kingston</div>
+                <div class="talk-title">Searching for Gamma- and hard X-ray Counterparts to Gravitational-wave events in GWTC-3 with Fermi-GBM and Swift-BAT</div>
+            </div>
+
+            <div class="talk-entry">
+                <div class="talk-date">July 2022 • NASA Marshall & University of Alabama</div>
+                <div class="talk-title"><span class="invited-tag">invited</span> Catching the next wave: Searching for gamma-ray counterparts to gravitational-wave events with Fermi-GBM and Swift-BAT</div>
+            </div>
+
+            <div class="talk-entry">
+                <div class="talk-date">June 2022 • IoA, Cambridge</div>
+                <div class="talk-title"><span class="invited-tag">invited</span> Astrophysical searches for axion-like particles in gamma-ray energies & multimessenger studies of the high-energy Universe</div>
+            </div>
+
+            <div class="talk-entry">
+                <div class="talk-date">April 2022 • APS April Meeting, New York</div>
+                <div class="talk-title">Searching for Axion-like Particles from Core-Collapse Supernovae with Fermi LAT's Low Energy Technique</div>
+            </div>
+
+            <div class="talk-entry">
+                <div class="talk-date">April 2022 • APS April Meeting, New York</div>
+                <div class="talk-title">Searching for Gamma- and X-ray Counterparts to Gravitational-wave events with Fermi-GBM and Swift-BAT (poster)</div>
+            </div>
+
+            <div class="talk-entry">
+                <div class="talk-date">March 2022 • HEAD Meeting, Pittsburgh</div>
+                <div class="talk-title">Searching for Axion-like Particles from Core-Collapse Supernovae with Fermi LAT's Low Energy Technique (poster)</div>
+            </div>
+
+            <!-- 2021 Talks -->
+            <div class="year-divider">2021</div>
+            
+            <div class="talk-entry">
+                <div class="talk-date">November 2021 • Kashiwa Dark Matter Symposium, online</div>
+                <div class="talk-title">Searching for Axion-like Particles from Core-Collapse Supernovae with Fermi LAT's Low Energy Technique</div>
+            </div>
+
+            <div class="talk-entry">
+                <div class="talk-date">November 2021 • Ohio State University</div>
+                <div class="talk-title"><span class="invited-tag">invited</span> Searching for Axion-like Particles from Core-Collapse Supernovae with Fermi LAT's Low Energy Technique</div>
+            </div>
+
+            <div class="talk-entry">
+                <div class="talk-date">August 2021 • NASA Goddard</div>
+                <div class="talk-title"><span class="invited-tag">invited</span> Searching for Axion-like Particles from Core-Collapse Supernovae with Fermi LAT's Low Energy Technique</div>
+            </div>
+
+            <div class="talk-entry">
+                <div class="talk-date">July 2021 • ICRC 2021, online</div>
+                <div class="talk-title"><span class="invited-tag">invited</span> Picture a Scientist (panelist)</div>
+            </div>
+
+            <div class="talk-entry">
+                <div class="talk-date">March 2021 • Aspen Center for Physics, online</div>
+                <div class="talk-title">Axion-like Particles from Core-collapse Supernovae: Investigating Fermi's Sensitivity (poster)</div>
+            </div>
+
+            <!-- Earlier years with fewer entries -->
+            <div class="year-divider">2020</div>
+            
+            <div class="talk-entry">
+                <div class="talk-date">October 2020 • Multimessenger Diversity Network, online</div>
+                <div class="talk-title"><span class="invited-tag">invited</span> Equity, Diversity, and Inclusion Initiatives at the University of Maryland Astronomy Department</div>
+            </div>
+
+            <div class="talk-entry">
+                <div class="talk-date">March 2020 • Fermi Collaboration Meeting, online</div>
+                <div class="talk-title">Axion-like Particles from Core-collapse Supernovae: Investigating Fermi's Sensitivity</div>
+            </div>
+
+            <div class="year-divider">2019</div>
+            
+            <div class="talk-entry">
+                <div class="talk-date">September 2019 • Fermi Collaboration Meeting, Santa Cruz</div>
+                <div class="talk-title">ALP-induced Core-collapse Supernovae</div>
+            </div>
+
+            <div class="year-divider">2018</div>
+            
+            <div class="talk-entry">
+                <div class="talk-date">June 2018 • Fermi Summer School, Lewes</div>
+                <div class="talk-title">Axion-like Particles and Where to Find Them</div>
+            </div>
+
+            <div class="year-divider">2017</div>
+            
+            <div class="talk-entry">
+                <div class="talk-date">April 2017 • Middlebury College</div>
+                <div class="talk-title">Quasar/Galaxy Co-evolution with OSIRIS</div>
+            </div>
+
+            <div class="talk-entry">
+                <div class="talk-date">January 2017 • Harvard University</div>
+                <div class="talk-title">Quasar/Galaxy Co-evolution with OSIRIS</div>
+            </div>
+
+            <div class="year-divider">2016</div>
+            
+            <div class="talk-entry">
+                <div class="talk-date">August 2016 • Middlebury College</div>
+                <div class="talk-title">Edge Expansion of Scalar Casimir Energies (poster)</div>
+            </div>
+
+            <div class="talk-entry">
+                <div class="talk-date">January 2016 • Syracuse University</div>
+                <div class="talk-title">New Selection Criteria for Red and Obscured Quasars in Stripe 82 (poster)</div>
+            </div>
+
+            <div class="year-divider">2015</div>
+            
+            <div class="talk-entry">
+                <div class="talk-date">October 2015 • Williams College</div>
+                <div class="talk-title">New Selection Criteria for Red and Obscured Quasars in Stripe 82</div>
+            </div>
+
+            <div class="year-divider">2010</div>
+            
+            <div class="talk-entry">
+                <div class="talk-date">September 2010 • Belgrade</div>
+                <div class="talk-title">Hilbert's Theorem 90</div>
+            </div>        </div>
     </section>
 
-<section class="copyright">website &copy; <span id="copyright-date"></span></section>
+    <section class="footer">
+        <span style="float:center; font-family:'Montserrat', sans-serif;font-size:12px;">
+            <small><a href="index.html" style="color:#1F315D">English</a> &nbsp;&nbsp; <a href="index_serbian.html" style="color:#1F315D">srpski</a> &nbsp;&nbsp;<a href="index_italian.html" style="color:#1F315D">italiano</a></small>
+        </span>
+        <br><br>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Add font awesome icons -->
+        <a href="https://www.linkedin.com/in/milena-crnogorčević-924034204" class="fa fa-linkedin"></a>
+        <a href="https://github.com/mcrnogor" class="fa fa-github"></a>
+        <a href="mailto:milena.crnogorcevic@fysik.su.se" class="fa fa-envelope"></a>
+        <a href="https://www.instagram.com/letters_to_mi/" class="fa fa-instagram"></a>
+    </section>
 
+    <section class="copyright">website &copy; <span id="copyright-date"></span></section>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Bootstrap core JavaScript -->
     <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
-
-
-
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/jquery.fitvids.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/mobile-menu.js"></script>
     <script type="text/javascript" src="js/theme-toggle.js"></script>
     <script>
-document.addEventListener('DOMContentLoaded', function() {
-    var currentDate = new Date();
-    var year = currentDate.getFullYear();
-    var months = ["January", "February", "March", "April", "May", "June", 
-                  "July", "August", "September", "October", "November", "December"];
-    var month = months[currentDate.getMonth()]; // Get the month as a string
-
-    // Combine month and year in the format "Month Year"
-    document.getElementById('copyright-date').textContent = `M.C. ${month} ${year}`;
-});
-</script>
-
- </body>
+        document.addEventListener('DOMContentLoaded', function() {
+            var currentDate = new Date();
+            var year = currentDate.getFullYear();
+            var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            var month = months[currentDate.getMonth()];
+            document.getElementById('copyright-date').textContent = `M.C. ${month} ${year}`;
+        });
+    </script>
+</body>
 </html>
