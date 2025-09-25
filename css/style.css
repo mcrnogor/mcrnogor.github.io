@@ -573,4 +573,47 @@ font-family: monospace;
   color: #000;
 }
 
+/* Add these CSS rules to fix the talks page styling issues */
 
+/* Remove underlines from talk title links */
+.talk-title a {
+    border-bottom: none !important;
+    text-decoration: none !important;
+}
+
+.talk-title a:hover {
+    border-bottom: none !important;
+    text-decoration: none !important;
+}
+
+/* Fix light theme text contrast - make text darker for better readability */
+.talk-title {
+    color: #222 !important; /* Darker text for better contrast */
+}
+
+.talk-date {
+    color: #555 !important; /* Darker gray for dates */
+}
+
+/* Ensure date links are also more readable in light theme */
+.talk-date a {
+    color: #0052cc !important; /* Darker blue for better contrast */
+    border-bottom: none !important;
+    text-decoration: none !important;
+}
+
+.talk-date a:hover {
+    color: #003d99 !important; /* Even darker blue on hover */
+    text-decoration: underline !important;
+    border-bottom: none !important;
+}
+
+/* Make sure the invited tag is also readable */
+.invited-tag {
+    color: #CC3300 !important; /* Darker red for better contrast */
+}
+
+/* Year divider should also be darker for readability */
+.year-divider {
+    color: #666 !important; /* Darker gray */
+}
