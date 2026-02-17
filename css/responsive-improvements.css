@@ -26,9 +26,41 @@ html, body {
     z-index: 100; /* Ensure dropdowns appear above other content */
 }
 
+/* Desktop dropdown styling */
+@media (min-width: 769px) {
+    .dropbtn {
+        cursor: pointer;
+        position: relative;
+        padding-right: 18px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    /* Add arrow indicator for desktop dropdowns */
+    .dropbtn::after {
+        content: '▼';
+        font-size: 9px;
+        color: #800040;
+        margin-left: 2px;
+    }
+
+    .dropdown-content {
+        background-color: #fdfcfd;
+        min-width: 160px;
+        box-shadow: none;
+        z-index: 101;
+        border: 1px solid #f5e6f0;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f5e6f0;
+    }
+}
+
+/* Mobile dropdown fallback */
 .dropdown-content {
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 101;
 }
 
@@ -38,21 +70,25 @@ html, body {
         position: static;
         display: none;
         width: 100%;
-        background-color: #f9f9f9;
+        background-color: #fdfcfd;
         box-shadow: none;
         margin-top: 5px;
     }
-    
+
     .dropdown-content a {
         padding: 15px; /* Larger touch targets */
-        border-bottom: 1px solid #eee;
+        background-color: #fdfcfd;
     }
-    
+
+    .dropdown-content a:hover {
+        background-color: #f5e6f0;
+    }
+
     /* JavaScript will toggle this class */
     .dropdown.active .dropdown-content {
         display: block;
     }
-    
+
     /* Convert dropbtn to be clickable on mobile */
     .dropbtn {
         cursor: pointer;
@@ -184,9 +220,300 @@ a:focus, button:focus, .dropbtn:focus {
         padding: 10px;
         margin: 2px;
     }
-    
+
     .header-block a {
         padding: 8px;
         display: inline-block;
     }
+}
+
+/* Better mobile text sizing */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Ensures readable text on mobile */
+    }
+
+    p {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+    }
+
+    /* Prevent text from being too small */
+    * {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+}
+
+/* Mobile navigation improvements */
+@media (max-width: 768px) {
+    .header-block {
+        width: 95%;
+        padding: 10px 0;
+    }
+
+    .blog-title {
+        margin-bottom: 10px;
+    }
+
+    .col-md-12 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .col-md-12 > a,
+    .col-md-12 > .dropdown {
+        font-size: 14px;
+    }
+}
+
+/* Improved content spacing on mobile */
+@media (max-width: 768px) {
+    .post-list {
+        width: 95%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .post-data {
+        padding: 10px;
+    }
+
+    /* Better spacing for paragraphs on mobile */
+    .post-content p {
+        margin-bottom: 1em;
+    }
+}
+
+/* Better image handling on mobile */
+@media (max-width: 768px) {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    figure {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    figcaption {
+        font-size: 13px !important;
+        padding: 10px;
+    }
+}
+
+/* Footer improvements for mobile */
+@media (max-width: 768px) {
+    .footer {
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .copyright {
+        text-align: center;
+        font-size: 12px;
+        padding: 15px 10px;
+    }
+
+    .fa {
+        margin: 5px;
+    }
+}
+
+/* Small screen optimizations */
+@media (max-width: 480px) {
+    .header-block {
+        width: 98%;
+    }
+
+    .post-list {
+        width: 98%;
+    }
+
+    /* Stack navigation vertically on very small screens */
+    .col-md-12 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-md-12 > a,
+    .col-md-12 > .dropdown {
+        width: auto;
+        text-align: center;
+    }
+}
+
+/* ========================================
+   MOBILE HAMBURGER MENU
+   ======================================== */
+
+/* Hamburger menu button - hidden by default, shown on mobile */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px;
+    color: #111;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 1000;
+}
+
+.mobile-menu-toggle:hover {
+    color: #800040;
+}
+
+/* Show hamburger menu on mobile */
+@media (max-width: 768px) {
+    /* Show the hamburger button */
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    /* Make header relative for absolute positioning */
+    .header-block {
+        position: relative;
+    }
+
+    /* Hide desktop navigation by default on mobile */
+    .col-md-12 {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        background-color: var(--bg-color, #fff);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 999;
+        gap: 0;
+    }
+
+    /* Show navigation when menu is open */
+    .col-md-12.mobile-menu-open {
+        display: flex;
+    }
+
+    /* Style navigation links for mobile */
+    .col-md-12 > a {
+        display: block;
+        padding: 15px 10px;
+        font-size: 16px;
+        color: #111;
+        text-decoration: none;
+        width: 100%;
+        text-align: left;
+    }
+
+    .col-md-12 > a:hover {
+        color: #800040;
+        background-color: #f5e6f0;
+    }
+
+    /* Dropdown styling for mobile */
+    .col-md-12 > .dropdown {
+        width: 100%;
+    }
+
+    .col-md-12 > .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 15px 10px;
+        padding-right: 35px;
+        background: none;
+        border: none;
+        font-size: 16px;
+        color: #111;
+        cursor: pointer;
+        position: relative;
+    }
+
+    /* Add arrow indicator for dropdowns */
+    .col-md-12 > .dropdown .dropbtn::after {
+        content: '▼';
+        position: absolute;
+        right: 15px;
+        font-size: 12px;
+        transition: transform 0.3s;
+    }
+
+    .col-md-12 > .dropdown.active .dropbtn::after {
+        transform: rotate(180deg);
+    }
+
+    .col-md-12 > .dropdown .dropbtn:hover {
+        color: #800040;
+        background-color: #f5e6f0;
+    }
+
+    .col-md-12 > .dropdown.active .dropbtn {
+        background-color: #f5e6f0;
+    }
+
+    /* Dropdown content in mobile menu */
+    .col-md-12 > .dropdown .dropdown-content {
+        position: static;
+        display: none;
+        width: 100%;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+        padding-left: 15px;
+    }
+
+    .col-md-12 > .dropdown.active .dropdown-content {
+        display: block;
+    }
+
+    .col-md-12 > .dropdown .dropdown-content a {
+        padding: 12px 10px;
+        display: block;
+        color: #111;
+        text-align: left;
+        font-size: 15px;
+    }
+
+    .col-md-12 > .dropdown .dropdown-content a:hover {
+        color: #800040;
+        background-color: #f5e6f0;
+    }
+
+    /* Center the title when menu is present */
+    .blog-title {
+        text-align: center;
+        padding-left: 60px; /* Make room for hamburger */
+    }
+
+    .blog-title h1 {
+        text-align: center;
+    }
+}
+
+/* Dark theme support for mobile menu */
+html.dark-theme .col-md-12,
+body.dark-theme .col-md-12,
+[data-theme="dark"] .col-md-12 {
+    background-color: var(--bg-color, #1a1a1a);
+}
+
+html.dark-theme .mobile-menu-toggle,
+body.dark-theme .mobile-menu-toggle,
+[data-theme="dark"] .mobile-menu-toggle {
+    color: #e0e0e0;
+}
+
+html.dark-theme .mobile-menu-toggle:hover,
+body.dark-theme .mobile-menu-toggle:hover,
+[data-theme="dark"] .mobile-menu-toggle:hover {
+    color: #ff7755;
 }
