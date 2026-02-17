@@ -627,7 +627,7 @@ font-family: monospace;
 
 /* Make sure the invited tag is also readable */
 .invited-tag {
-    color: #CC3300 !important; /* Darker red for better contrast */
+    color: #800040 !important; /* Purple to match website theme */
 }
 
 /* Year divider should also be darker for readability */

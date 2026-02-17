@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <body>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+    <title> Milena Crnogorčević</title>
+    <meta name="description"
+    content="Milena a Postdoctoral Fellow at the Oskar Klein Centre, interested in high-energy astroparticle physics. She is currently working on indirect dark matter searches using data from NASA's Fermi Gamma-ray Space Telescope.
+    She is also involved in multimessenger efforts."
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="">
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Radley:400,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive-improvements.css">
+    <link rel="stylesheet" type="text/css" href="css/dark-theme.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+    h2 {text-align:center;}
+    </style>
+
+
+  <header class="header-block row">
+    <div class="blog-title">
+      <h1>milena crnogorčević
+      </h1>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    	<script>
+    	 // DOM ready
+    	 $(function() {
+
+          // Create the dropdown base
+          $("<select />").appendTo("nav");
+
+          // Create default option "Go to..."
+          $("<option />", {
+             "selected": "selected",
+             "value"   : "",
+             "text"    : "Go to..."
+          }).appendTo("nav select");
+
+          // Populate dropdown with menu items
+          $("nav a").each(function() {
+           var el = $(this);
+           $("<option />", {
+               "value"   : el.attr("href"),
+               "text"    : el.text()
+           }).appendTo("nav select");
+          });
+
+    	   // To make dropdown actually work
+    	   // To make more unobtrusive: http://css-tricks.com/4064-unobtrusive-page-changer/
+          $("nav select").change(function() {
+            window.location = $(this).find("option:selected").val();
+          });
+
+    	 });
+    	</script>
+
+      <nav>
+
+      	<ul>
+          <li><a href="index_italian.html">Home</a></li>&nbsp;&nbsp;
+
+        </ul>
+      </nav>
+              <link rel="stylesheet" type="text/css" href="css/responsive-improvements.css">
+    <script type="text/javascript" src="js/mobile-menu.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/dark-theme.css">
+    <script type="text/javascript" src="js/theme-toggle.js"></script>
+</head>
+
+
+  </header>
+
+  <!-- <p style="text-align:right"><font size="2.5" color="#00b8a9"> name pronounciation: <strong> milêːna tsr̩nogortʃeʋitɕ</strong> <br> pronouns: <strong> she/her </strong> </font> </p> -->
+<div id="container">
+  <section class="post-list post-content"><div class="post-data">
+    <img src=""></img>
+   <figure>
+     <img src="img/headshot.jpg" style="padding: 30px; float: right; width: 350px;">
+  </figure>
+
+   <p style = "font-family: monospace;font-size:15px; LINE-HEIGHT:20px"> <br> <br>
+     [Questa pagina ha bisogno di un po' più di attenzione. Nel frattempo, scopri di più <a href="index.html">qui</a>.]
+     <br> <br>
+     Ciao tutti!
+<br> <br>
+     Mi chiamo Milena e sono dottoranda in astronomia presso <a href="https://www.umd.edu">l’Università del Maryland</a> e Ente Nazionale per le attività Spaziali e Aeronautiche (NASA) <a href="https://www.nasa.gov/goddard">Goddard</a>.
+     Mi occupo di astrofisica delle alte energie e fisica astroparticellare, ed in particolare dello studio della materia oscura e di analisi di supernova e i lampi da raggi gamma.
+     Lavoro inoltre all'astronomia multimessaggero e sto studiando l'origine dei neutrini astrofisici e le osservazioni elettromagnetiche dei oggetti visti con le onde gravitazionali.
+
+   <br> <br>
+   <br> <br>
+   <br> <br>
+   <br> <br>
+   <br> <br>
+
+
+
+ </p>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- <div class="pagination-wrapper">
+
+<nav class="pagination" role="pagination">
+
+        <a class="older-posts" href="#"> <span class="glyphicon glyphicon-menu-down"></span> </a>
+</nav> -->
+<br> <br>
+
+
+
+<section class="footer">
+  <span style="float:center; font-family:'Montserrat', sans-serif;font-size:12px;">
+    <small><a href="index.html" style="color:#1F315D">English</a> &nbsp;&nbsp; <a href="index_serbian.html" style="color:#1F315D">srpski</a> &nbsp;&nbsp;<a href="index_italian.html" style="color:#1F315D">italiano</a></small>
+</span>
+<br><br>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Add font awesome icons -->
+    <a href="https://www.linkedin.com/in/milena-crnogorčević-924034204" class="fa fa-linkedin"></a>
+    <a href="https://github.com/mcrnogor" class="fa fa-github"></a>
+    <a href="mailto:milena.crnogorcevic@fysik.su.se" class="fa fa-envelope"></a>
+    <a href="https://www.instagram.com/letters_to_mi/" class="fa fa-instagram"></a>
+
+    </section>
+
+
+
+    </section>
+ <section class="copyright">website &copy; <span id="copyright-date"></span></section>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+
+
+
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery.fitvids.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mobile-menu.js"></script>
+    <script type="text/javascript" src="js/theme-toggle.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    var currentDate = new Date();
+    var year = currentDate.getFullYear();
+    var months = ["January", "February", "March", "April", "May", "June", 
+                  "July", "August", "September", "October", "November", "December"];
+    var month = months[currentDate.getMonth()]; // Get the month as a string
+
+    // Combine month and year in the format "Month Year"
+    document.getElementById('copyright-date').textContent = `M.C. ${month} ${year}`;
+});
+</script>
+
+ </body>
+</html>
