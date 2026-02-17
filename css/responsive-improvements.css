@@ -26,6 +26,27 @@ html, body {
     z-index: 100; /* Ensure dropdowns appear above other content */
 }
 
+/* NUCLEAR OVERRIDE - Remove all borders/shadows from dropdowns */
+.dropdown-content,
+.dropdown-content *,
+.dropdown-content a,
+.dropdown-content a:hover,
+.dropdown-content a:focus,
+.dropdown-content a:active,
+.dropdown-content a:visited,
+.col-md-12 > .dropdown .dropdown-content,
+.col-md-12 > .dropdown .dropdown-content *,
+.col-md-12 > .dropdown .dropdown-content a,
+.col-md-12 > .dropdown .dropdown-content a:hover,
+.col-md-12 > .dropdown .dropdown-content a:focus,
+.col-md-12 > .dropdown .dropdown-content a:active {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+}
+
 /* Desktop dropdown styling */
 @media (min-width: 769px) {
     .dropbtn {
@@ -46,15 +67,21 @@ html, body {
     }
 
     .dropdown-content {
-        background-color: #fdfcfd;
+        background-color: white;
         min-width: 160px;
-        box-shadow: none;
         z-index: 101;
-        border: 1px solid #f5e6f0;
+    }
+
+    .dropdown-content a {
+        background-color: white;
+        font-family: monospace;
+        font-size: 14px;
+        color: #555;
     }
 
     .dropdown-content a:hover {
         background-color: #f5e6f0;
+        color: #800040;
     }
 }
 
@@ -70,18 +97,22 @@ html, body {
         position: static;
         display: none;
         width: 100%;
-        background-color: #fdfcfd;
+        background-color: white;
         box-shadow: none;
         margin-top: 5px;
     }
 
     .dropdown-content a {
         padding: 15px; /* Larger touch targets */
-        background-color: #fdfcfd;
+        background-color: white;
+        font-family: monospace;
+        font-size: 14px;
+        color: #555;
     }
 
     .dropdown-content a:hover {
         background-color: #f5e6f0;
+        color: #800040;
     }
 
     /* JavaScript will toggle this class */
@@ -290,8 +321,11 @@ a:focus, button:focus, .dropbtn:focus {
 /* Better image handling on mobile */
 @media (max-width: 768px) {
     img {
-        max-width: 100%;
+        max-width: 80%;
         height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     figure {
@@ -299,9 +333,24 @@ a:focus, button:focus, .dropbtn:focus {
         text-align: center;
     }
 
+    figure img {
+        max-width: 70%;
+    }
+
     figcaption {
         font-size: 13px !important;
         padding: 10px;
+    }
+}
+
+/* Even smaller images on very small screens */
+@media (max-width: 480px) {
+    img {
+        max-width: 70%;
+    }
+
+    figure img {
+        max-width: 60%;
     }
 }
 
@@ -393,7 +442,7 @@ a:focus, button:focus, .dropbtn:focus {
         left: 0;
         right: 0;
         padding: 20px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        box-shadow: none;
         z-index: 999;
         gap: 0;
     }
@@ -465,10 +514,12 @@ a:focus, button:focus, .dropbtn:focus {
         position: static;
         display: none;
         width: 100%;
-        background-color: transparent;
-        box-shadow: none;
+        background-color: white;
+        box-shadow: none !important;
+        border: none !important;
         padding: 0;
-        padding-left: 15px;
+        padding-left: 0;
+        margin: 0;
     }
 
     .col-md-12 > .dropdown.active .dropdown-content {
@@ -476,16 +527,25 @@ a:focus, button:focus, .dropbtn:focus {
     }
 
     .col-md-12 > .dropdown .dropdown-content a {
-        padding: 12px 10px;
+        padding: 12px 10px 12px 20px;
         display: block;
-        color: #111;
+        color: #555;
         text-align: left;
-        font-size: 15px;
+        font-size: 14px;
+        font-family: monospace;
+        background-color: white;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        margin: 0;
     }
 
     .col-md-12 > .dropdown .dropdown-content a:hover {
         color: #800040;
         background-color: #f5e6f0;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
     }
 
     /* Center the title when menu is present */
