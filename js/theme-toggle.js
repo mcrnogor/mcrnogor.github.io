@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Create icons for sun and moon
     const moonIcon = document.createElement('span');
     moonIcon.className = 'icon-moon';
-    moonIcon.innerHTML = '🌙';
-    
+    moonIcon.innerHTML = '&#9789;';
+
     const sunIcon = document.createElement('span');
     sunIcon.className = 'icon-sun';
-    sunIcon.innerHTML = '☀️';
+    sunIcon.innerHTML = '&#9737;';
     
     // Add icons to button
     toggleButton.appendChild(moonIcon);
