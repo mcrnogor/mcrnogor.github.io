@@ -27,14 +27,12 @@ html, body {
 }
 
 /* NUCLEAR OVERRIDE - Remove all borders/shadows from dropdowns */
-.dropdown-content,
 .dropdown-content *,
 .dropdown-content a,
 .dropdown-content a:hover,
 .dropdown-content a:focus,
 .dropdown-content a:active,
 .dropdown-content a:visited,
-.col-md-12 > .dropdown .dropdown-content,
 .col-md-12 > .dropdown .dropdown-content *,
 .col-md-12 > .dropdown .dropdown-content a,
 .col-md-12 > .dropdown .dropdown-content a:hover,

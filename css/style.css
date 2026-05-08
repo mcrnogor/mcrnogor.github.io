@@ -410,10 +410,16 @@ audio{
   position: absolute;
   background-color: white;
   min-width: 160px;
-  box-shadow: none !important;
-  border: none !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-left: 1px solid #800040;
+  border-right: 1px solid #800040;
+  border-bottom: 1px solid #800040;
+  border-radius: 0 0 8px 8px;
   outline: none !important;
   z-index: 1;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
 
 /* Links inside the dropdown */
@@ -428,6 +434,12 @@ audio{
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
+  margin: 0;
+}
+
+.dropdown-content a:last-child {
+  margin-bottom: 0;
+  padding-bottom: 12px;
 }
 
 /* Change color of dropdown links on hover */

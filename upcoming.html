@@ -96,17 +96,17 @@
                 color: #e0e0e0;
             }
             .talk-title a {
-                color: #66b3ff;
+                color: #d89fff;
             }
             .talk-title a:hover {
-                color: #99ccff;
+                color: #e8c1ff;
             }
             .invited-tag {
-                color: #ff9cee;
+                color: #ffc107;
             }
             .future-talk {
-                background-color: rgba(128, 0, 64, 0.08);
-                border-left: 3px solid #800040;
+                background-color: rgba(216, 159, 255, 0.08);
+                border-left: 3px solid #d89fff;
             }
             .year-divider {
                 color: #888;
@@ -250,22 +250,43 @@
         body.dark-theme .talk-title a,
         .dark-theme .talk-title a,
         [data-theme="dark"] .talk-title a {
-            color: #66b3ff !important;
+            color: #d89fff !important;
         }
-        
+
         html.dark-theme .talk-title a:hover,
         body.dark-theme .talk-title a:hover,
         .dark-theme .talk-title a:hover,
         [data-theme="dark"] .talk-title a:hover {
-            color: #99ccff !important;
+            color: #e8c1ff !important;
+        }
+
+        html.dark-theme .talk-date a,
+        body.dark-theme .talk-date a,
+        .dark-theme .talk-date a,
+        [data-theme="dark"] .talk-date a {
+            color: #d89fff !important;
+        }
+
+        html.dark-theme .talk-date a:hover,
+        body.dark-theme .talk-date a:hover,
+        .dark-theme .talk-date a:hover,
+        [data-theme="dark"] .talk-date a:hover {
+            color: #e8c1ff !important;
+        }
+
+        html.dark-theme .invited-tag,
+        body.dark-theme .invited-tag,
+        .dark-theme .invited-tag,
+        [data-theme="dark"] .invited-tag {
+            color: #4dd0e1 !important;
         }
 
         html.dark-theme .future-talk,
         body.dark-theme .future-talk,
         .dark-theme .future-talk,
         [data-theme="dark"] .future-talk {
-            background-color: rgba(128, 0, 64, 0.08) !important;
-            border-left: 2px solid #800040 !important;
+            background-color: rgba(216, 159, 255, 0.08) !important;
+            border-left: 2px solid #d89fff !important;
         }
     </style>
 </head>
@@ -305,15 +326,15 @@
         <div class="talks-container">
             <!-- Future Talks -->
             <div class="year-divider">Upcoming</div>
-        
-             <div class="talk-entry future-talk">
-                <div class="talk-date">April 24, 2026 • Nordita, Stockholm • <a href="https://indico.fysik.su.se/event/9646/overview">CosmoBrainstorm 2026</a></div>
-                <div class="talk-title"><span class="invited-tag">invited</span> Gamma Rays and Dark Matter: Status and Prospects</div>
-            </div>
+
+                        <div class="talk-entry future-talk">
+                <div class="talk-date">May 2026 • Stockholm, Sweden • <a href="https://pintofscience.se/event/planet-earth/">Pint of Science Festival, Stockholm</a></div>
+                <div class="talk-title"> All the Dark We Cannot See</div>
+                </div>
 
             <div class="talk-entry future-talk">
                 <div class="talk-date">May 2026 • Valencia, Spain • <a href="https://indico.ific.uv.es/event/7396/">@FlipPhysics Workshop</a></div>
-                <div class="talk-title"><span class="invited-tag">invited</span> [TBA: Experimental Astroparticle Physics]</div>
+                <div class="talk-title"><span class="invited-tag">invited</span> A Multimessenger Window into the Dark Matters of the Universe</div>
             </div>
 
             <div class="talk-entry future-talk">
@@ -322,7 +343,31 @@
             </div>
 
             <!-- 2026 Talks -->
+
+
+
              <div class="year-divider">2026</div>
+
+               <div class="talk-entry">
+                <div class="talk-date">May 2026 • Oskar Klein Centre •<a href="https://indico.fysik.su.se/event/9691/"> Extreme Objects Working Group Seminar</a></div>
+                <div class="talk-title"><span class="invited-tag">invited</span> <a href="talks/2026/eo-wg2026.pdf">Do We See Superluminous Supernovae in Gamma Rays?</a></div>
+            </div>
+
+            <div class="talk-entry">
+                <div class="talk-date">May 2026 • Stockholm University • <a href="https://www.su.se/english/education/course-catalogue/fk/fk8045">Advanced Astroparticle Physics Course (lecture)</a></div>
+                <div class="talk-title"><span class="invited-tag">invited </span> <a href="talks/2026/FK8045_fermipy2026.pdf">Analyzing Gamma-Ray Data with fermipy and gammapy</a></div>
+            </div>
+
+            <div class="talk-entry">
+                <div class="talk-date">April 2026 • Nordita, Stockholm • <a href="https://indico.fysik.su.se/event/9646/overview">CosmoBrainstorm 2026</a></div>
+                <div class="talk-title"><span class="invited-tag">invited</span> <a href="talks/2026/CosmoBrainStorm2026.pdf">Gamma Rays and Dark Matter: Status and Prospects</a></div>
+            </div>
+
+            <div class="talk-entry">
+                <div class="talk-date">March 2026 • Middlebury, Vermont • <a href="https://www.instagram.com/p/DVeAh36EU0M/">Women and Gender Minorities in Physics, Middlebury College</a></div>
+                <div class="talk-title"><span class="invited-tag">outreach talk, invited</span> <a href="talks/2026/Middlebury2026.pdf">My Journey into Astrophysics </a></div>
+            </div>
+
             <div class="talk-entry">
                 <div class="talk-date">March 2026 • Stockholm, Sweden • <a href="https://scientifika.se/talk/2026/03/20/Milena/">ScientiFika Talk</a></div>
                 <div class="talk-title"><span class="invited-tag">outreach talk</span> <a href="talks/2026/ScientiFika.pdf">From Cold War Satellites to Modern Gamma-Ray Astronomy </a></div>

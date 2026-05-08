@@ -27,7 +27,8 @@
     --bg-color: #121212;
     --text-color: #ffffff;
     --header-color: #ffffff;
-    --link-color: #7fdbff;
+    --link-color: #d89fff;
+    --brand-color: #d89fff;
     --link-hover-color: #00ffff;
     --border-color: #444444;
     --dropdown-bg: #2a2a2a;
@@ -36,15 +37,15 @@
     --accent-color: #17bed2;
     --card-bg: #1e1e1e;
     --button-bg: #2a2a2a;
-    --button-color: #7fdbff;
-    --button-border: #7fdbff;
-    --button-hover-bg: #7fdbff;
+    --button-color: #d89fff;
+    --button-border: #d89fff;
+    --button-hover-bg: #d89fff;
     --button-hover-color: #121212;
     --sidebar-bg: #1a1a1a;
     --sidebar-title-bg: #2a2a2a;
-    --highlight-color: #ff9cee;
-    --announcement-color: #ff7070;
-    --language-link-color: #7fdbff;
+    --highlight-color: #d89fff;
+    --announcement-color: #d89fff;
+    --language-link-color: #d89fff;
 }
 
 /* Apply theme variables */
@@ -103,12 +104,20 @@ a:hover {
     color: var(--link-hover-color);
 }
 
-.dropdown-content {
-    background-color: var(--dropdown-bg);
+[data-theme="dark"] .dropdown-content {
+    background-color: var(--dropdown-bg) !important;
+    border-left-color: #d89fff !important;
+    border-right-color: #d89fff !important;
+    border-bottom-color: #d89fff !important;
 }
 
-.dropdown-content a:hover {
-    background-color: var(--dropdown-hover);
+[data-theme="dark"] .dropdown-content a {
+    background-color: var(--dropdown-bg) !important;
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .dropdown-content a:hover {
+    background-color: var(--dropdown-hover) !important;
 }
 
 .publication {
@@ -225,8 +234,27 @@ a:hover {
     color: var(--highlight-color) !important;
 }
 
-[data-theme="dark"] span[style*="color: #800040"] {
-    color: var(--announcement-color) !important;
+/* Override brand color text in dark theme */
+[data-theme="dark"] span[style*="color: #800040"],
+[data-theme="dark"] a[style*="color: #800040"],
+[data-theme="dark"] div[style*="color: #800040"],
+[data-theme="dark"] h2[style*="color: #800040"] {
+    color: var(--brand-color) !important;
+}
+
+/* Override brand color borders in dark theme */
+[data-theme="dark"] div[style*="border-left: 4px solid #800040"] {
+    border-left-color: var(--brand-color) !important;
+}
+
+/* Override brand color backgrounds (buttons only) */
+[data-theme="dark"] button[style*="background-color: #800040"] {
+    background-color: var(--brand-color) !important;
+}
+
+/* Style dropdown arrows in dark theme */
+[data-theme="dark"] .dropbtn::after {
+    color: var(--brand-color) !important;
 }
 
 /* Additional dark mode improvements */
