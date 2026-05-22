@@ -416,8 +416,8 @@ a:focus, button:focus, .dropbtn:focus {
     color: #800040;
 }
 
-/* Show hamburger menu on mobile */
-@media (max-width: 768px) {
+/* Show hamburger menu on mobile (incl. landscape phones up to ~900px) */
+@media (max-width: 900px) {
     /* Show the hamburger button */
     .mobile-menu-toggle {
         display: block;

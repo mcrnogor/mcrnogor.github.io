@@ -80,7 +80,7 @@ function initializeMobileMenu() {
                 e.stopPropagation();
 
                 // Only toggle dropdowns on mobile
-                if (window.innerWidth <= 768) {
+                if (window.innerWidth <= 900) {
                     // Close other dropdowns
                     dropdowns.forEach(d => {
                         if (d !== dropdown && d.classList.contains('active')) {
@@ -97,7 +97,7 @@ function initializeMobileMenu() {
 
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(e) {
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 900) {
             if (!e.target.closest('.header-block')) {
                 mobileNav.classList.remove('mobile-menu-open');
                 hamburger.innerHTML = '☰';
@@ -110,7 +110,7 @@ function initializeMobileMenu() {
     const navLinks = mobileNav.querySelectorAll('a:not(.dropbtn)');
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
-            if (window.innerWidth <= 768) {
+            if (window.innerWidth <= 900) {
                 mobileNav.classList.remove('mobile-menu-open');
                 hamburger.innerHTML = '☰';
                 dropdowns.forEach(d => d.classList.remove('active'));

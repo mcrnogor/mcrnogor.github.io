@@ -75,6 +75,15 @@ a:hover{
 .header-block a:hover{
 	color: #333;
 }
+/* Spacing between top-level nav items */
+.header-block .col-md-12 > a,
+.header-block .col-md-12 > .dropdown {
+	margin-right: 18px;
+}
+.header-block .col-md-12 > a:last-child,
+.header-block .col-md-12 > .dropdown:last-child {
+	margin-right: 0;
+}
 .blog-title{
 	font-family: 'Montserrat', sans-serif;
 }
