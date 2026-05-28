@@ -206,6 +206,11 @@ a:hover {
     color: inherit;
 }
 
+.theme-toggle .icon-moon {
+    display: inline-block;
+    transform: rotate(180deg);
+}
+
 [data-theme="dark"] .theme-toggle .icon-sun {
     color: #d89fff;
 }

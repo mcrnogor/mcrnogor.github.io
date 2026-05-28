@@ -107,6 +107,30 @@
     .pronunciation-widget-mobile button:active {
       background-color: #600030;
     }
+    .arxiv-library-btn:hover {
+      background-color: #a04a5f !important;
+    }
+    .arxiv-library-btn:active {
+      background-color: #600030 !important;
+    }
+    /* Dark-theme: match the play-button behavior */
+    html[data-theme="dark"] a.arxiv-library-btn,
+    html[data-theme="dark"] a.arxiv-library-btn:hover,
+    html[data-theme="dark"] a.arxiv-library-btn:visited,
+    html[data-theme="dark"] a.arxiv-library-btn:focus {
+      color: #ffffff !important;
+    }
+    html[data-theme="dark"] a.arxiv-library-btn {
+      background-color: #d89fff !important;
+    }
+    html[data-theme="dark"] a.arxiv-library-btn:hover {
+      background-color: #c187ef !important;
+    }
+    html.dark-theme .arxiv-callout,
+    body.dark-theme .arxiv-callout,
+    [data-theme="dark"] .arxiv-callout {
+      border-left-color: #d89fff !important;
+    }
   </style>
 
   <div class="blog-title">
@@ -119,7 +143,7 @@
         <a href="research.html">projects</a>
         <a href="upcoming.html">talks & lectures</a>
         <a href="publications.html">publications</a>
-        <a href="reading.html">reading list</a>
+        <a href="reading.html">my arXiv library</a>
         <a href="fig-sag.html">FIG-SAG</a>
       </div>
       </div>
@@ -188,7 +212,7 @@
     Before moving to Stockholm, I earned my PhD at the University of Maryland and NASA Goddard.
     <br><br>
    My homes are scattered across three continents and I am always planning a flight home.
-   <br> <br>
+   <br><br>
 <!--
    <b> <span style="color: #800040">Announcement [April 27, 2023]: </span></b>
    <i>I <a href="thesis.html">defended</a> my dissertation on April 24, 2023, "New Messengers & New Physics: A Survey of the High-energy Universe."
@@ -196,6 +220,20 @@
    <br> -->
    <!-- Clear float before News section -->
    <div style="clear: both;"></div>
+
+   <!-- arXiv library invitation -->
+   <div class="arxiv-callout" style="margin-top: 30px; padding: 16px 20px; background-color: var(--card-bg); border-left: 4px solid #800040; border-radius: 0 8px 8px 0; font-family: monospace; font-size: 14px; line-height: 1.5; color: var(--text-color); display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+     <span style="flex: 1; min-width: 220px;">
+       If you'd like to take a look at the  papers that I have been reading lately, see my
+     </span>
+     <a href="reading.html" class="arxiv-library-btn" style="display: inline-flex; align-items: center; gap: 6px; background-color: #800040; color: white; padding: 8px 14px; font-family: monospace; font-size: 13px; border-radius: 4px; text-decoration: none; transition: background-color 0.2s; white-space: nowrap;">
+       <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+         <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+         <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+       </svg>
+       arXiv library
+     </a>
+   </div>
 
    <!-- News section - latest item + link to full page -->
    <div style="margin-top: 40px; background-color: var(--card-bg); padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-left: 4px solid #800040;">
