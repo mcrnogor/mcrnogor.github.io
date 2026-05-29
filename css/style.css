@@ -674,3 +674,32 @@ font-family: monospace;
 .year-divider {
     color: #666 !important; /* Darker gray */
 }
+
+/* ============================================================
+   Site-wide links: no underline, no border, no extra spacing.
+   Color is intentionally left untouched so links keep their
+   distinguishing color in both light and dark themes.
+   !important wins over the non-important border-bottom hover
+   rules in dark-theme.css regardless of stylesheet load order.
+   ============================================================ */
+a,
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+/* Remove the padding that added space below content/sidebar links.
+   Button-style links (.arxiv-library-btn, .read-more-btn, .fa icons)
+   are excluded so their own padding stays intact and centered. */
+.post-list a:not(.arxiv-library-btn):not(.read-more-btn):not(.fa),
+.post-content a:not(.arxiv-library-btn):not(.read-more-btn):not(.fa),
+.sidebar a,
+.footer a:not(.fa),
+.navibar a,
+.header-block a {
+    padding-bottom: 0 !important;
+}

@@ -5,8 +5,8 @@
     --bg-color: #ffffff;
     --text-color: #333333;
     --header-color: #000000;
-    --link-color: #111111;
-    --link-hover-color: #8C8C8C;
+    --link-color: #800040;
+    --link-hover-color: #b3005c;
     --border-color: #E3E3E3;
     --dropdown-bg: #f1f1f1;
     --dropdown-hover: #ddd;
@@ -315,11 +315,27 @@ a:hover {
 }
 
 /* Ensure all headings are visible */
-[data-theme="dark"] h1, 
-[data-theme="dark"] h2, 
-[data-theme="dark"] h3, 
-[data-theme="dark"] h4, 
-[data-theme="dark"] h5, 
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
 [data-theme="dark"] h6 {
     color: var(--header-color) !important;
+}
+
+/* Top-level header nav links (Home, Calendar, News, Contact) should
+   stay neutral, not pick up the maroon body-link color. Dark theme
+   keeps its existing purple. */
+.header-block a {
+    color: #111;
+}
+.header-block a:hover {
+    color: #333;
+}
+[data-theme="dark"] .header-block a {
+    color: var(--link-color);
+}
+[data-theme="dark"] .header-block a:hover {
+    color: var(--link-hover-color);
 }
