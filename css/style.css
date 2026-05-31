@@ -699,7 +699,6 @@ a:focus {
 .post-content a:not(.arxiv-library-btn):not(.read-more-btn):not(.fa),
 .sidebar a,
 .footer a:not(.fa),
-.navibar a,
-.header-block a {
+.navibar a {
     padding-bottom: 0 !important;
 }
