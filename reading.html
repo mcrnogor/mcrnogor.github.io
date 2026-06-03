@@ -50,14 +50,47 @@
 
         .reading-month {
             font-family: 'Montserrat', sans-serif;
-            font-size: 22px;
+            font-size: 16px;
             font-weight: bold;
             color: #800040;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             margin: 40px 0 18px 0;
             padding-bottom: 6px;
             border-bottom: 2px solid #800040;
+        }
+
+        /* Collapsible month sections (click the month to expand/collapse) */
+        .reading-month-section {
+            margin-bottom: 10px;
+        }
+
+        summary.reading-month {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Remove the default disclosure triangle */
+        summary.reading-month {
+            list-style: none;
+        }
+        summary.reading-month::-webkit-details-marker {
+            display: none;
+        }
+
+        /* Custom caret that rotates when the section is open */
+        summary.reading-month::before {
+            content: "\25B8"; /* ▸ */
+            font-size: 12px;
+            line-height: 1;
+            transition: transform 0.2s ease;
+        }
+        details.reading-month-section[open] > summary.reading-month::before {
+            transform: rotate(90deg);
         }
 
         .reading-day {
@@ -170,7 +203,7 @@
             .reading-container { padding: 0 15px; }
             .reading-title { font-size: 15px; }
             .reading-why { font-size: 13px; }
-            .reading-month { font-size: 18px; }
+            .reading-month { font-size: 14px; }
         }
     </style>
 </head>
@@ -218,7 +251,46 @@ A running log of papers I find relevant to my work, updated every few days. <em>
 
 <!-- =================== ENTRIES =================== -->
 
-    <div class="reading-month">May 2026</div>
+    <details class="reading-month-section" open>
+    <summary class="reading-month">June 2026</summary>
+
+    <!-- 2 jun -->
+    <div class="reading-entry">
+      <div>
+        <span class="reading-day">2 Jun</span>
+      </div>
+
+      <div style="margin-top: 10px;">
+        <span class="reading-title"><a href="https://arxiv.org/abs/2606.00249" target="_blank">The Delta Resonance in the Neutrino Sky</a></span>
+        <div class="reading-authors" style="margin-top: 8px;">
+          A. Khatee Zathul, K. Fang, F. Halzen, D. Hooper
+        </div>
+        <div class="reading-meta">
+          <a href="https://arxiv.org/abs/2606.00249" target="_blank">arXiv:2606.00249</a> &nbsp;·&nbsp; astro-ph.HE
+        </div>
+        <div class="reading-why">
+          <span class="reading-why-label">Why: </span> Proposes that the ~30 TeV break in IceCube's diffuse neutrino spectrum arises from the Δ-resonance in p–γ interactions, which would also lower the neutrino-source contribution to the isotropic gamma-ray background.
+        </div>
+      </div>
+
+      <div style="margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--border-color, #e0e0e0);">
+        <span class="reading-title"><a href="https://arxiv.org/abs/2606.01853" target="_blank">Possible High-Energy Neutrino Emission from Dark Matter Annihilation in the Disrupting Dwarf Galaxy Boötes III</a></span>
+        <div class="reading-authors" style="margin-top: 8px;">
+          S. Ji, Z. Wang
+        </div>
+        <div class="reading-meta">
+          <a href="https://arxiv.org/abs/2606.01853" target="_blank">arXiv:2606.01853</a> &nbsp;·&nbsp; astro-ph.HE
+        </div>
+        <div class="reading-why">
+          <span class="reading-why-label">Why: </span> Candidate high-energy neutrino signal from dark matter annihilation in the disrupting dwarf Boötes III, with a post-trial significance of 3.1σ pointing to a ~26.5 TeV dark matter mass.
+        </div>
+      </div>
+    </div>
+
+    </details>
+
+    <details class="reading-month-section">
+    <summary class="reading-month">May 2026</summary>
     
     
     <!-- 29 may -->
@@ -367,6 +439,8 @@ A running log of papers I find relevant to my work, updated every few days. <em>
         <span class="reading-why-label">Why: </span>   A nice step toward 3D Galactic CR tomography beyond traditional ring analyses, though the physical interpretation of the 4–6 kpc enhancement remains assumption-dependent.
       </div>
     </div>
+
+    </details>
 
     <!-- =================== / ENTRIES =================== -->
 
