@@ -28,13 +28,40 @@
             margin: 0 auto;
             padding: 0 20px;
         }
+        .past-timeline {
+            position: relative;
+            padding-left: 24px;
+        }
+        .past-timeline::before {
+            content: '';
+            position: absolute;
+            left: 11px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border-color, #e0e0e0);
+        }
+        .past-timeline .talk-entry {
+            position: relative;
+        }
+        .past-timeline .talk-entry::before {
+            content: '';
+            position: absolute;
+            left: -17px;
+            top: 21px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--brand-color, #800040);
+            border: 2px solid var(--bg-color, #fff);
+        }
         .talk-entry {
             margin-bottom: 18px;
             padding: 10px 0;
             border-bottom: 1px solid #eee;
         }
         .talk-date {
-            font-size: 14px;
+            font-size: 12px;
             color: #555;
             font-family: monospace;
             margin-bottom: 6px;
@@ -69,9 +96,10 @@
             letter-spacing: 0.5px;
         }
         .future-talk {
-            background-color: rgba(128, 0, 64, 0.04);
-            border-left: 2px solid #800040;
-            padding-left: 12px;
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--brand-color, #800040);
+            border-radius: 14px;
+            padding: 12px 16px;
         }
         .year-divider {
             margin: 30px 0 25px 0;
@@ -104,10 +132,6 @@
             .invited-tag {
                 color: #ffc107;
             }
-            .future-talk {
-                background-color: rgba(216, 159, 255, 0.08);
-                border-left: 3px solid #d89fff;
-            }
             .year-divider {
                 color: #888;
             }
@@ -131,7 +155,7 @@
             }
             
             .talk-date {
-                font-size: 13px;
+                font-size: 11px;
                 margin-bottom: 8px;
                 line-height: 1.4;
             }
@@ -150,10 +174,6 @@
                 margin: 25px 0 20px 0;
             }
             
-            .future-talk {
-                padding-left: 8px;
-                margin-left: -8px;
-            }
         }
         
         @media (max-width: 480px) {
@@ -172,7 +192,7 @@
             }
             
             .talk-date {
-                font-size: 12px;
+                font-size: 10px;
                 margin-bottom: 6px;
             }
             
@@ -190,10 +210,6 @@
                 margin: 20px 0 15px 0;
             }
             
-            .future-talk {
-                padding-left: 6px;
-                margin-left: -6px;
-            }
         }
         html.dark-theme h2,
         html.dark-theme .talk-title,
@@ -280,14 +296,6 @@
         [data-theme="dark"] .invited-tag {
             color: #4dd0e1 !important;
         }
-
-        html.dark-theme .future-talk,
-        body.dark-theme .future-talk,
-        .dark-theme .future-talk,
-        [data-theme="dark"] .future-talk {
-            background-color: rgba(216, 159, 255, 0.08) !important;
-            border-left: 2px solid #d89fff !important;
-        }
     </style>
 </head>
 
@@ -329,20 +337,20 @@
             <div class="year-divider">Upcoming</div>
 
             <div class="talk-entry future-talk">
-                <div class="talk-date">July-August 2026 • Erice, Italy • <a href="https://agenda.astro.ru.nl/event/26/overview">The International school of Cosmic Ray Astrophysics</a></div>
-                <div class="talk-title"><span class="invited-tag">invited</span> [TBA: Lectures on Dark Matter]</div>
-            </div>
-
-            <div class="talk-entry future-talk">
                 <div class="talk-date">Sept-Oct 2026 • Tenerife, Spain • <a href="https://meetings.iac.es/astrodarkgamma/">2nd UNDARK Workshop: Astrophysical Searches of Dark Sectors with Gamma-Ray Observations</a></div>
                 <div class="talk-title"><span class="invited-tag">invited</span> [TBA]</div>
             </div>
 
             <!-- 2026 Talks -->
 
-
+            <div class="past-timeline">
 
              <div class="year-divider">2026</div>
+
+            <div class="talk-entry">
+                <div class="talk-date">July-August 2026 • Erice, Italy • <a href="https://agenda.astro.ru.nl/event/26/overview">The International School of Cosmic Ray Astrophysics</a></div>
+                <div class="talk-title"><span class="invited-tag">invited</span> Lectures on Dark Matter — <a href="talks/2026/2026_erice_DM_lecture1_final.pdf">lecture 1</a>, <a href="talks/2026/2026_erice_DM_lecture2_final.pdf">lecture 2</a>, <a href="talks/2026/2026_erice_DM_lecture3_final.pdf">lecture 3</a></div>
+            </div>
 
             <div class="talk-entry">
                 <div class="talk-date">May 2026 • Valencia, Spain • <a href="https://indico.ific.uv.es/event/7396/">@FlipPhysics Workshop</a></div>
@@ -655,7 +663,10 @@
             <div class="talk-entry">
                 <div class="talk-date">September 2010 • Belgrade</div>
                 <div class="talk-title">Hilbert's Theorem 90</div>
-            </div>        </div>
+            </div>
+
+            </div>
+        </div>
     </section>
 
     <section class="footer">

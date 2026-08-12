@@ -665,9 +665,20 @@ font-family: monospace;
     border-bottom: none !important;
 }
 
+/* Title links match the conference-name links in light theme */
+.talk-title a {
+    color: #800040 !important;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.talk-title a:hover {
+    color: #a04a7a !important;
+}
+
 /* Make sure the invited tag is also readable */
 .invited-tag {
-    color: #800040 !important; /* Purple to match website theme */
+    color: #17bed2 !important; /* Teal to match website accent */
 }
 
 /* Year divider should also be darker for readability */
