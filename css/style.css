@@ -668,8 +668,9 @@ font-family: monospace;
 /* Title links match the conference-name links in light theme */
 .talk-title a {
     color: #800040 !important;
-    font-weight: bold;
-    font-size: 17px;
+    font-family: monospace !important;
+    font-weight: bold !important;
+    font-size: 12px !important;
 }
 
 .talk-title a:hover {
