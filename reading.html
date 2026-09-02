@@ -21,10 +21,91 @@
     <meta name="theme-color" content="#ffffff">
 
     <style>
-        .reading-container {
-            max-width: 820px;
+        .reading-layout {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1100px;
             margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        .reading-container {
+            box-sizing: border-box;
+            flex: 0 1 820px;
+            max-width: 820px;
             padding: 0 20px;
+        }
+
+        .reading-archive {
+            box-sizing: border-box;
+            flex: 0 0 200px;
+            max-width: 220px;
+            position: sticky;
+            top: 30px;
+            margin-top: 15px;
+            padding: 16px 18px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color, #e0e0e0);
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        }
+
+        .reading-archive h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            color: var(--brand-color, #800040);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0 0 12px 0;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .archive-year {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            color: var(--text-color);
+            margin: 14px 0 6px 0;
+        }
+
+        .archive-year:first-of-type { margin-top: 0; }
+
+        .reading-archive a {
+            display: block;
+            font-family: monospace;
+            font-size: 13px;
+            color: var(--text-color);
+            text-decoration: none !important;
+            padding: 3px 0 3px 10px;
+            border-left: 2px solid transparent;
+            transition: color 0.15s ease, border-left-color 0.15s ease;
+        }
+
+        .reading-archive a:hover {
+            color: var(--brand-color, #800040);
+            border-left-color: var(--brand-color, #800040);
+        }
+
+        @media (max-width: 1050px) {
+            .reading-layout { flex-direction: column; }
+            .reading-container { width: 100%; max-width: 100%; }
+            .reading-archive {
+                position: static;
+                width: 100%;
+                max-width: 100%;
+                margin-top: 30px;
+            }
+            .reading-archive .archive-links {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 4px 16px;
+            }
+            .reading-archive a { padding: 3px 4px; border-left: none; border-bottom: 2px solid transparent; }
+            .reading-archive a:hover { border-left: none; border-bottom-color: var(--brand-color, #800040); }
         }
 
         .reading-intro {
@@ -113,6 +194,24 @@
             line-height: 1.4;
             margin: 0 0 8px 0;
             display: inline;
+        }
+
+        .reading-star {
+            color: var(--brand-color, #800040);
+            margin-right: 4px;
+        }
+
+        .reading-links {
+            font-family: monospace;
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        .reading-links a {
+            color: var(--brand-color, #800040);
+            text-decoration: none !important;
+            font-weight: bold;
+            margin-right: 12px;
         }
 
         .reading-title a {
@@ -241,6 +340,7 @@
 </header>
 
 <section id="main-content" class="post-list post-content">
+ <div class="reading-layout">
   <div class="reading-container">
 
     <h2 style="font-family: 'Montserrat', sans-serif; color: #800040; text-align: center; margin-top: 20px;">My arXiv Library</h2>
@@ -251,8 +351,152 @@ A running log of papers I find relevant to my work, updated every few days. <em>
 
 <!-- =================== ENTRIES =================== -->
 
-    <details class="reading-month-section" open>
+    <details class="reading-month-section" open id="archive-sep-2026">
+    <summary class="reading-month">September 2026</summary>
+
+    <!-- 2 sep -->
+    <div class="reading-entry">
+      <div>
+        <span class="reading-day">2 Sep</span>
+      </div>
+
+      <div style="margin-top: 10px;">
+        <span class="reading-title"><a href="https://arxiv.org/abs/2609.01504" target="_blank">Higgsino Above the Sea of Fog</a></span>
+        <div class="reading-authors" style="margin-top: 8px;">
+          J. Fan, M. Reece
+        </div>
+        <div class="reading-meta">
+          <a href="https://arxiv.org/abs/2609.01504" target="_blank">arXiv:2609.01504</a> &nbsp;·&nbsp; hep-ph
+        </div>
+      </div>
+
+      <div style="margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--border-color, #e0e0e0);">
+        <span class="reading-title"><a href="https://arxiv.org/abs/2609.01583" target="_blank">Higgsino Dark Matter Interpretation of the LUX-ZEPLIN 248 keV Nuclear-Recoil Event</a></span>
+        <div class="reading-authors" style="margin-top: 8px;">
+          K. Freese, D. P. Theodosopoulos
+        </div>
+        <div class="reading-meta">
+          <a href="https://arxiv.org/abs/2609.01583" target="_blank">arXiv:2609.01583</a> &nbsp;·&nbsp; hep-ph
+        </div>
+      </div>
+
+      <div style="margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--border-color, #e0e0e0);">
+        <span class="reading-title"><a href="https://arxiv.org/abs/2609.01590" target="_blank">TeV Higgsino Dark Matter from LZ Nuclear Recoil to Fermi-LAT Gamma Rays</a></span>
+        <div class="reading-authors" style="margin-top: 8px;">
+          L. Wu, Y. Zhang, B. Zhu
+        </div>
+        <div class="reading-meta">
+          <a href="https://arxiv.org/abs/2609.01590" target="_blank">arXiv:2609.01590</a> &nbsp;·&nbsp; hep-ph
+        </div>
+      </div>
+
+      <div style="margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--border-color, #e0e0e0);">
+        <span class="reading-title"><a href="https://arxiv.org/abs/2609.01592" target="_blank">Fermionic Dark Matter Absorption and the High-Energy Event in LUX-ZEPLIN</a></span>
+        <div class="reading-authors" style="margin-top: 8px;">
+          Y. Lou, h.-T. Lu
+        </div>
+        <div class="reading-meta">
+          <a href="https://arxiv.org/abs/2609.01592" target="_blank">arXiv:2609.01592</a> &nbsp;·&nbsp; hep-ph
+        </div>
+      </div>
+
+      <div style="margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--border-color, #e0e0e0);">
+        <span class="reading-title"><a href="https://arxiv.org/abs/2609.00989" target="_blank">The Missing MeV Window for Identifying Galactic PeVatrons: the need for a dedicated MeV Observatory</a></span>
+        <div class="reading-authors" style="margin-top: 8px;">
+          M. Cardillo, R. Campana, Y. Evangelista, F. Muleri
+        </div>
+        <div class="reading-meta">
+          <a href="https://arxiv.org/abs/2609.00989" target="_blank">arXiv:2609.00989</a> &nbsp;·&nbsp; astro-ph.HE
+        </div>
+      </div>
+
+      <div style="margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--border-color, #e0e0e0);">
+        <span class="reading-title"><a href="https://arxiv.org/abs/2609.00118" target="_blank">Solar Spin-Dependent Dark Matter-Neutron Cross Section Constraints: The Lost Case</a></span>
+        <div class="reading-authors" style="margin-top: 8px;">
+          T. T. Q. Nguyen, C. Blanco, T. Linden
+        </div>
+        <div class="reading-meta">
+          <a href="https://arxiv.org/abs/2609.00118" target="_blank">arXiv:2609.00118</a> &nbsp;·&nbsp; hep-ph
+        </div>
+      </div>
+    </div>
+
+    <!-- 1 sep -->
+    <div class="reading-entry">
+      <div>
+        <span class="reading-day">1 Sep</span>
+      </div>
+
+      <div style="margin-top: 10px;">
+        <span class="reading-star">★</span><span class="reading-title"><a href="https://lz.lbl.gov/wp-content/uploads/sites/6/2026/08/LZ_Preprint_260901_Dark_Matter_EFT_Nuclear_Recoil_Search_at_Higher_Energies.pdf" target="_blank">Search for dark matter particle interactions in an extended nuclear recoil energy window with the LUX-ZEPLIN (LZ) experiment</a></span>
+        <div class="reading-authors" style="margin-top: 8px;">
+          LZ Collaboration
+        </div>
+        <div class="reading-meta">
+          high-energy nuclear-recoil event at 3.4σ local, 2.6σ global
+        </div>
+        <div class="reading-links">
+          <a href="https://lz.lbl.gov/wp-content/uploads/sites/6/2026/08/LZ_Preprint_260901_Dark_Matter_EFT_Nuclear_Recoil_Search_at_Higher_Energies.pdf" target="_blank">preprint →</a>
+          <a href="https://indico-icehap.phys.s.chiba-u.ac.jp/event/3/contributions/471/attachments/334/765/2026_TeVPA_SE_v3.pdf" target="_blank">TeVPA slides →</a>
+        </div>
+      </div>
+
+      <div style="margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--border-color, #e0e0e0);">
+        <span class="reading-star">★</span><span class="reading-title"><a href="https://xenonexperiment.org/wp-content/uploads/2026/08/XENONnT_Solar_pp_compressed.pdf" target="_blank">First Measurement of Solar Neutrinos through Elastic Neutrino-Electron Scattering at the keV Scale</a></span>
+        <div class="reading-authors" style="margin-top: 8px;">
+          XENON Collaboration
+        </div>
+        <div class="reading-meta">
+          5σ detection of solar pp neutrinos
+        </div>
+        <div class="reading-links">
+          <a href="https://xenonexperiment.org/wp-content/uploads/2026/08/XENONnT_Solar_pp_compressed.pdf" target="_blank">paper →</a>
+          <a href="https://xenonexperiment.org/xenonnt-first-measurement-of-low-energy-solar-neutrinos-scattering-off-electrons/" target="_blank">press release →</a>
+        </div>
+      </div>
+
+      <div style="margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--border-color, #e0e0e0);">
+        <span class="reading-title"><a href="https://arxiv.org/abs/2608.31160" target="_blank">Ad Astra White Paper: A Pitch for the Next 25 Years of NASA's Physics of the Cosmos Program</a></span>
+        <div class="reading-authors" style="margin-top: 8px;">
+          E. Burns, I. Agullo, I. Andreoni, C. M. Deibel, C. L. Fryer, N. Latouf, M. C. Miller, J. C. Rastinejad, B. N. Sitarski, Z. Wadiasingh
+        </div>
+        <div class="reading-meta">
+          <a href="https://arxiv.org/abs/2608.31160" target="_blank">arXiv:2608.31160</a> &nbsp;·&nbsp; astro-ph.IM
+        </div>
+      </div>
+
+      <div style="margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--border-color, #e0e0e0);">
+        <span class="reading-title"><a href="https://arxiv.org/abs/2608.28757" target="_blank">Decisive evidence for a global cosmic-ray feature in gamma-ray data</a></span>
+        <div class="reading-authors" style="margin-top: 8px;">
+          F. Valenciano, P. De la Torre Luque, D. Gaggero, J. Martin Camalich
+        </div>
+        <div class="reading-meta">
+          <a href="https://arxiv.org/abs/2608.28757" target="_blank">arXiv:2608.28757</a> &nbsp;·&nbsp; astro-ph.HE
+        </div>
+      </div>
+    </div>
+
+    </details>
+
+    <details class="reading-month-section" id="archive-aug-2026">
     <summary class="reading-month">August 2026</summary>
+
+    <!-- 28 aug -->
+    <div class="reading-entry">
+      <div>
+        <span class="reading-day">28 Aug</span>
+      </div>
+
+      <div style="margin-top: 10px;">
+        <span class="reading-title"><a href="https://arxiv.org/abs/2608.26933" target="_blank">Anisotropy-driven constraints on the transition from Galactic to extragalactic cosmic-ray sources</a></span>
+        <div class="reading-authors" style="margin-top: 8px;">
+          T. Bister, F. Oikonomou, D. F. G. Fiorillo
+        </div>
+        <div class="reading-meta">
+          <a href="https://arxiv.org/abs/2608.26933" target="_blank">arXiv:2608.26933</a> &nbsp;·&nbsp; astro-ph.HE
+        </div>
+      </div>
+    </div>
 
     <!-- 25 aug -->
     <div class="reading-entry">
@@ -520,7 +764,7 @@ A running log of papers I find relevant to my work, updated every few days. <em>
 
     </details>
 
-    <details class="reading-month-section" open>
+    <details class="reading-month-section" id="archive-jul-2026">
     <summary class="reading-month">July 2026</summary>
 
     <div class="reading-entry">
@@ -766,7 +1010,7 @@ A running log of papers I find relevant to my work, updated every few days. <em>
 
     </details>
 
-    <details class="reading-month-section" open>
+    <details class="reading-month-section" id="archive-jun-2026">
     <summary class="reading-month">June 2026</summary>
 
     <!-- 25 jun -->
@@ -1127,7 +1371,7 @@ A running log of papers I find relevant to my work, updated every few days. <em>
 
     </details>
 
-    <details class="reading-month-section">
+    <details class="reading-month-section" id="archive-may-2026">
     <summary class="reading-month">May 2026</summary>
     
     
@@ -1282,6 +1526,19 @@ A running log of papers I find relevant to my work, updated every few days. <em>
     <!-- =================== / ENTRIES =================== -->
 
   </div>
+
+  <aside class="reading-archive">
+    <h3>Archive</h3>
+    <div class="archive-links">
+      <div class="archive-year">2026</div>
+      <a href="#archive-sep-2026">September</a>
+      <a href="#archive-aug-2026">August</a>
+      <a href="#archive-jul-2026">July</a>
+      <a href="#archive-jun-2026">June</a>
+      <a href="#archive-may-2026">May</a>
+    </div>
+  </aside>
+ </div>
 </section>
 
 <section class="footer">
@@ -1318,6 +1575,15 @@ A running log of papers I find relevant to my work, updated every few days. <em>
         var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         var month = months[currentDate.getMonth()];
         document.getElementById('copyright-date').textContent = `M.C. ${month} ${year}`;
+    });
+
+    document.querySelectorAll('.reading-archive a[href^="#"]').forEach(function(link) {
+        link.addEventListener('click', function() {
+            var target = document.querySelector(link.getAttribute('href'));
+            if (target && target.tagName === 'DETAILS') {
+                target.open = true;
+            }
+        });
     });
 </script>
 </body>
