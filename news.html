@@ -26,6 +26,142 @@
     <link rel="apple-touch-icon" href="/img/logo.png">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+
+    <style>
+      .timeline {
+        position: relative;
+        max-width: 920px;
+        margin: 20px auto 0;
+        padding: 10px 0 10px 0;
+      }
+      .timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 2px;
+        background: var(--border-color);
+        transform: translateX(-50%);
+      }
+      .timeline-item {
+        position: relative;
+        width: 50%;
+        box-sizing: border-box;
+        padding: 0 36px;
+        margin-bottom: 46px;
+      }
+      .timeline-item.tl-left { left: 0; }
+      .timeline-item.tl-right { left: 50%; }
+      .timeline-marker {
+        position: absolute;
+        top: 1px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: var(--brand-color, #800040);
+        border: 3px solid var(--card-bg, #fff);
+      }
+      .timeline-item.tl-left .timeline-marker { right: -8px; }
+      .timeline-item.tl-right .timeline-marker { left: -8px; }
+      .timeline-date {
+        font-family: monospace, sans-serif;
+        color: var(--brand-color, #800040);
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 6px;
+      }
+      .timeline-content {
+        font-family: monospace, sans-serif;
+        font-size: 14px;
+        line-height: 1.4;
+        color: var(--text-color);
+        overflow: hidden;
+        background-color: var(--card-bg, #fff);
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+        padding: 14px 16px;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      }
+      .timeline-content:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+        border-color: var(--brand-color, #800040);
+      }
+
+      /* Scroll-reveal: JS toggles .in-view once each item scrolls into place */
+      .timeline-item {
+        opacity: 0;
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+      .timeline-item.tl-right { transform: translateX(24px); }
+      .timeline-item.tl-left { transform: translateX(-24px); }
+      .timeline-item.in-view {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .timeline-item { opacity: 1; transform: none; transition: none; }
+      }
+
+      /* Marker: perks up on hover, pulses on the newest entry */
+      .timeline-marker {
+        transition: transform 0.2s ease;
+      }
+      .timeline-item:hover .timeline-marker {
+        transform: scale(1.35);
+      }
+      .timeline-marker.is-latest {
+        --pulse-rgb: 128, 0, 64;
+        animation: tl-pulse 2.2s ease-out infinite;
+      }
+      [data-theme="dark"] .timeline-marker.is-latest {
+        --pulse-rgb: 216, 159, 255;
+      }
+      @keyframes tl-pulse {
+        0%   { box-shadow: 0 0 0 0 rgba(var(--pulse-rgb), 0.55); }
+        70%  { box-shadow: 0 0 0 11px rgba(var(--pulse-rgb), 0); }
+        100% { box-shadow: 0 0 0 0 rgba(var(--pulse-rgb), 0); }
+      }
+
+      /* "New" badge on the most recent entry */
+      .new-badge {
+        display: inline-block;
+        background: var(--brand-color, #800040);
+        color: #fff;
+        font-family: monospace, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        padding: 2px 8px;
+        border-radius: 999px;
+        margin-left: 8px;
+        vertical-align: middle;
+        animation: tl-pop 0.5s ease 0.3s both;
+      }
+      @keyframes tl-pop {
+        0%   { transform: scale(0); opacity: 0; }
+        70%  { transform: scale(1.15); opacity: 1; }
+        100% { transform: scale(1); }
+      }
+
+      @media (max-width: 700px) {
+        .timeline { max-width: 100%; padding-left: 0; }
+        .timeline::before { left: 18px; }
+        .timeline-item,
+        .timeline-item.tl-left,
+        .timeline-item.tl-right {
+          width: 100%;
+          left: 0;
+          padding: 0 8px 0 44px;
+        }
+        .timeline-item.tl-left .timeline-marker,
+        .timeline-item.tl-right .timeline-marker {
+          left: 10px;
+          right: auto;
+        }
+      }
+    </style>
 </head>
 
 <body>
@@ -61,69 +197,99 @@
 </header>
 <section id="main-content" class="post-list post-content"><div class="post-data">
 
-   <div style="max-width: 720px; margin: 0 auto;">
+   <div class="timeline">
 
-     <div style="font-family: monospace, sans-serif; color: #800040; margin-top: 15px; font-size: 14px; font-weight: bold;">October 1, 2026</div>
-     <div style="font-family: monospace, sans-serif; font-size: 14px; margin-bottom: 25px; line-height: 1.4; color: var(--text-color);">
-       <span style="color: #800040;">★</span> I have started my Marie Skłodowska-Curie Postdoctoral Fellowship at <a href="https://www.grappa.amsterdam/" style="color: #800040;">GRAPPA</a>, University of Amsterdam, in Prof. Shin'ichiro Ando's group!
+     <div class="timeline-item tl-right">
+       <span class="timeline-marker is-latest"></span>
+       <div class="timeline-date">October 1, 2026 <span class="new-badge">new</span></div>
+       <div class="timeline-content">
+         <span style="color: #800040;">★</span> I have started my Marie Skłodowska-Curie Postdoctoral Fellowship at <a href="https://www.grappa.amsterdam/" style="color: #800040;">GRAPPA</a>, University of Amsterdam, in Prof. Shin'ichiro Ando's group!
+       </div>
      </div>
 
-     <div style="border-top: 1px solid var(--border-color); padding-top: 20px;"></div>
-
-     <div style="font-family: monospace, sans-serif; color: #800040; margin-top: 15px; font-size: 14px; font-weight: bold;">July 16, 2026</div>
-     <div style="font-family: monospace, sans-serif; font-size: 14px; margin-bottom: 25px; line-height: 1.4; color: var(--text-color);">
-       <span style="color: #800040;">★</span> I have been awarded an <a href="https://www.nwo.nl/en/news/205-researchers-receive-veni-grants" style="color: #800040;">NWO Veni grant</a> for my project <em>"All or Nothing? Multimessenger Probes of Mixed Dark Matter Scenarios"</em>. See the <a href="https://www.uva.nl/en/content/news/news/2026/07/veni-grants-for-28-uva-and-amsterdam-umc-researchers.html" style="color: #800040;">UvA announcement</a>.
+     <div class="timeline-item tl-left">
+       <span class="timeline-marker"></span>
+       <div class="timeline-date">August 12, 2026</div>
+       <div class="timeline-content" style="overflow: hidden;">
+         <figure style="float: right; margin: 4px 0 8px 18px; max-width: 200px;">
+           <a href="img/conferences_talks_lectures/iscra2026/iscra2026.jpg" target="_blank" aria-label="Click to enlarge photo">
+             <img src="img/conferences_talks_lectures/iscra2026/iscra2026.jpg" alt="ISCRA 2026 school in Erice" style="width: 100%; display: block; border-radius: 6px; box-shadow: 0 2px 10px rgba(0,0,0,0.18); cursor: zoom-in;"/>
+           </a>
+           <figcaption style="font-family: monospace, sans-serif; font-size: 12px; color: var(--muted-color, #777); margin-top: 6px; font-style: italic; text-align: center;">ISCRA 2026, Erice. (click to enlarge)</figcaption>
+         </figure>
+         <span style="color: #800040;">★</span> I had a wonderful time teaching dark matter at the <a href="https://agenda.astro.ru.nl/event/26/" style="color: #800040;">2026 International School of Cosmic Ray Astrophysics</a>! The school brought together a fantastic group of students and lecturers in the medieval town of Erice, overlooking the Mediterranean. I thoroughly enjoyed the discussions on cosmic rays, gamma rays, neutrinos, dark matter, and other corners of astroparticle physics. My three introductory lectures on dark matter are linked here.
+         <br>
+         <a href="talks/2026/2026_erice_DM_lecture1_final.pdf" style="font-family: monospace; color: #800040; text-decoration: none; font-size: 14px; font-weight: bold; margin-left: 8px;" aria-label="View lecture 1 slides">lecture 1 →</a>
+         <a href="talks/2026/2026_erice_DM_lecture2_final.pdf" style="font-family: monospace; color: #800040; text-decoration: none; font-size: 14px; font-weight: bold; margin-left: 8px;" aria-label="View lecture 2 slides">lecture 2 →</a>
+         <a href="talks/2026/2026_erice_DM_lecture3_final.pdf" style="font-family: monospace; color: #800040; text-decoration: none; font-size: 14px; font-weight: bold; margin-left: 8px;" aria-label="View lecture 3 slides">lecture 3 →</a>
+       </div>
      </div>
 
-     <div style="border-top: 1px solid var(--border-color); padding-top: 20px;"></div>
-
-     <div style="font-family: monospace, sans-serif; color: #800040; margin-top: 15px; font-size: 14px; font-weight: bold;">May 18, 2026</div>
-     <div style="font-family: monospace, sans-serif; font-size: 14px; margin-bottom: 25px; line-height: 1.4; color: var(--text-color); overflow: hidden;">
-       <figure style="float: right; margin: 4px 0 8px 18px; max-width: 240px;">
-         <img src="img/outreach/pos2.png" alt="Pint of Science Stockholm — All the Dark We Cannot See" style="width: 100%; display: block; border-radius: 6px; box-shadow: 0 2px 10px rgba(0,0,0,0.18);"/>
-         <figcaption style="font-family: monospace, sans-serif; font-size: 12px; color: var(--muted-color, #777); margin-top: 6px; font-style: italic; text-align: center;">Pint of Science Stockholm, May 2026.</figcaption>
-       </figure>
-       <span style="color: #800040;">★</span> I gave a talk titled <em>"All the Dark We Cannot See"</em> at the Stockholm <a href="https://pintofscience.se/event/planet-earth/" style="color: #800040;">Pint of Science</a> festival! We discussed dark matter over a pint, with a wonderfully curious public audience!
-       <a href="talks/2026/2026_PoS.pdf" style="font-family: monospace; color: #800040; text-decoration: none; font-size: 14px; font-weight: bold; margin-left: 8px;" aria-label="View slides">slides &rarr;</a>
+     <div class="timeline-item tl-right">
+       <span class="timeline-marker"></span>
+       <div class="timeline-date">July 16, 2026</div>
+       <div class="timeline-content">
+         <span style="color: #800040;">★</span> I have been awarded an <a href="https://www.nwo.nl/en/news/205-researchers-receive-veni-grants" style="color: #800040;">NWO Veni grant</a> for my project <em>"All or Nothing? Multimessenger Probes of Mixed Dark Matter Scenarios"</em>. See the <a href="https://www.uva.nl/en/content/news/news/2026/07/veni-grants-for-28-uva-and-amsterdam-umc-researchers.html" style="color: #800040;">UvA announcement</a>.
+       </div>
      </div>
 
-     <div style="border-top: 1px solid var(--border-color); padding-top: 20px;"></div>
-
-     <div style="font-family: monospace, sans-serif; color: #800040; margin-top: 15px; font-size: 14px; font-weight: bold;">May 5, 2026</div>
-     <div style="font-family: monospace, sans-serif; font-size: 14px; margin-bottom: 25px; line-height: 1.4; color: var(--text-color);">
-       <span style="color: #800040;">★</span> I gave a lecture on <strong>fermipy and gammapy</strong> for the Advanced Astroparticle Physics Course at Stockholm University. Lecture materials, notebooks, and examples are available on <a href="https://github.com/mcrnogor/fermipy-lecture" style="color: #800040;">GitHub</a>.
-       <a href="talks/2026/FK8045_fermipy2026.pdf" style="font-family: monospace; color: #800040; text-decoration: none; font-size: 14px; font-weight: bold; margin-left: 8px;" aria-label="View lecture slides">slides →</a>
+     <div class="timeline-item tl-left">
+       <span class="timeline-marker"></span>
+       <div class="timeline-date">May 18, 2026</div>
+       <div class="timeline-content" style="overflow: hidden;">
+         <figure style="float: right; margin: 4px 0 8px 18px; max-width: 200px;">
+           <a href="img/outreach/pos2.png" target="_blank" aria-label="Click to enlarge photo">
+             <img src="img/outreach/pos2.png" alt="Pint of Science Stockholm — All the Dark We Cannot See" style="width: 100%; display: block; border-radius: 6px; box-shadow: 0 2px 10px rgba(0,0,0,0.18); cursor: zoom-in;"/>
+           </a>
+           <figcaption style="font-family: monospace, sans-serif; font-size: 12px; color: var(--muted-color, #777); margin-top: 6px; font-style: italic; text-align: center;">Pint of Science Stockholm, May 2026. (click to enlarge)</figcaption>
+         </figure>
+         <span style="color: #800040;">★</span> I gave a talk titled <em>"All the Dark We Cannot See"</em> at the Stockholm <a href="https://pintofscience.se/event/planet-earth/" style="color: #800040;">Pint of Science</a> festival! We discussed dark matter over a pint, with a wonderfully curious public audience!
+         <a href="talks/2026/2026_PoS.pdf" style="font-family: monospace; color: #800040; text-decoration: none; font-size: 14px; font-weight: bold; margin-left: 8px;" aria-label="View slides">slides &rarr;</a>
+       </div>
      </div>
 
-     <div style="border-top: 1px solid var(--border-color); padding-top: 20px;"></div>
-
-     <div style="font-family: monospace, sans-serif; color: #800040; margin-top: 15px; font-size: 14px; font-weight: bold;">April 21, 2026</div>
-     <div style="font-family: monospace, sans-serif; font-size: 14px; margin-bottom: 25px; line-height: 1.4; color: var(--text-color);">
-       <span style="color: #800040;">★</span> New paper on arXiv with Tim Linden, Ariel Goobar, and Brian D. Metzger. We search for gamma-ray signals from the largest superluminous supernovae sample to date and find curious constraints and curiouser potential detections!  
-       <a href="https://arxiv.org/abs/2604.16595" style="font-family: monospace; color: #800040; text-decoration: none; font-size: 14px; font-weight: bold; margin-left: 8px;" aria-label="Read more: SLSNe and Fermi-LAT on arXiv">more →</a>
+     <div class="timeline-item tl-right">
+       <span class="timeline-marker"></span>
+       <div class="timeline-date">May 5, 2026</div>
+       <div class="timeline-content">
+         <span style="color: #800040;">★</span> I gave a lecture on <strong>fermipy and gammapy</strong> for the Advanced Astroparticle Physics Course at Stockholm University. Lecture materials, notebooks, and examples are available on <a href="https://github.com/mcrnogor/fermipy-lecture" style="color: #800040;">GitHub</a>.
+         <a href="talks/2026/FK8045_fermipy2026.pdf" style="font-family: monospace; color: #800040; text-decoration: none; font-size: 14px; font-weight: bold; margin-left: 8px;" aria-label="View lecture slides">slides →</a>
+       </div>
      </div>
 
-     <div style="border-top: 1px solid var(--border-color); padding-top: 20px;"></div>
-
-     <div style="font-family: monospace, sans-serif; color: #800040; margin-top: 15px; font-size: 14px; font-weight: bold;">April 7, 2026</div>
-     <div style="font-family: monospace, sans-serif; font-size: 14px; margin-bottom: 25px; line-height: 1.4; color: var(--text-color);">
-       <span style="color: #800040;">★</span> I will be giving a talk at the <a href="https://pintofscience.se/event/planet-earth/" style="color: #800040;">Pint of Science</a> festival in Stockholm (May 18-20). Join either my (May 18) or any of the other exciting sessions. You can get tickets for each day/session for free (with a donation option as a choice).
+     <div class="timeline-item tl-left">
+       <span class="timeline-marker"></span>
+       <div class="timeline-date">April 21, 2026</div>
+       <div class="timeline-content">
+         <span style="color: #800040;">★</span> New paper on arXiv with Tim Linden, Ariel Goobar, and Brian D. Metzger. We search for gamma-ray signals from the largest superluminous supernovae sample to date and find curious constraints and curiouser potential detections!
+         <a href="https://arxiv.org/abs/2604.16595" style="font-family: monospace; color: #800040; text-decoration: none; font-size: 14px; font-weight: bold; margin-left: 8px;" aria-label="Read more: SLSNe and Fermi-LAT on arXiv">more →</a>
+       </div>
      </div>
 
-     <div style="border-top: 1px solid var(--border-color); padding-top: 20px;"></div>
-
-     <div style="font-family: monospace, sans-serif; color: #800040; margin-top: 15px; font-size: 14px; font-weight: bold;">February 17, 2026</div>
-     <div style="font-family: monospace, sans-serif; font-size: 14px; margin-bottom: 25px; line-height: 1.4; color: var(--text-color);">
-       <span style="color: #800040;">★</span> I have been awarded a Marie Skłodowska-Curie Fellowship to pursue my research on multimessenger dark matter searches, working within Prof. Shin'ichiro Ando's group at <a href="https://grappa.amsterdam/" style="color: #800040;">GRAPPA</a>, University of Amsterdam (starting Fall 2026).
-       <a href="https://marie-sklodowska-curie-actions.ec.europa.eu/whats-new/news/msca-awards-eu4043-million-to-postdoctoral-researchers" style="font-family: monospace; color: #800040; text-decoration: none; font-size: 14px; font-weight: bold; margin-left: 8px;" aria-label="Read more: MSCA Postdoctoral Fellowships announcement">more →</a>
+     <div class="timeline-item tl-right">
+       <span class="timeline-marker"></span>
+       <div class="timeline-date">April 7, 2026</div>
+       <div class="timeline-content">
+         <span style="color: #800040;">★</span> I will be giving a talk at the <a href="https://pintofscience.se/event/planet-earth/" style="color: #800040;">Pint of Science</a> festival in Stockholm (May 18-20). Join either my (May 18) or any of the other exciting sessions. You can get tickets for each day/session for free (with a donation option as a choice).
+       </div>
      </div>
 
-     <div style="border-top: 1px solid var(--border-color); padding-top: 20px;"></div>
+     <div class="timeline-item tl-left">
+       <span class="timeline-marker"></span>
+       <div class="timeline-date">February 17, 2026</div>
+       <div class="timeline-content">
+         <span style="color: #800040;">★</span> I have been awarded a Marie Skłodowska-Curie Fellowship to pursue my research on multimessenger dark matter searches, working within Prof. Shin'ichiro Ando's group at <a href="https://grappa.amsterdam/" style="color: #800040;">GRAPPA</a>, University of Amsterdam (starting Fall 2026).
+         <a href="https://marie-sklodowska-curie-actions.ec.europa.eu/whats-new/news/msca-awards-eu4043-million-to-postdoctoral-researchers" style="font-family: monospace; color: #800040; text-decoration: none; font-size: 14px; font-weight: bold; margin-left: 8px;" aria-label="Read more: MSCA Postdoctoral Fellowships announcement">more →</a>
+       </div>
+     </div>
 
-     <div style="font-family: monospace, sans-serif; color: #800040; margin-top: 15px; font-size: 14px; font-weight: bold;">October 21, 2025</div>
-     <div style="font-family: monospace, sans-serif; font-size: 14px; line-height: 1.4; color: var(--text-color);">
-       <span style="color: #800040;">★</span> ICRC 2025 Dark Matter rapporteur is on arXiv!
-       <a href="https://arxiv.org/abs/2510.17473" style="font-family: monospace; color: #800040; text-decoration: none; font-size: 14px; font-weight: bold; margin-left: 8px;" aria-label="Read more: ICRC 2025 Dark Matter rapporteur on arXiv">more →</a>
+     <div class="timeline-item tl-right">
+       <span class="timeline-marker"></span>
+       <div class="timeline-date">October 21, 2025</div>
+       <div class="timeline-content">
+         <span style="color: #800040;">★</span> ICRC 2025 Dark Matter rapporteur is on arXiv!
+         <a href="https://arxiv.org/abs/2510.17473" style="font-family: monospace; color: #800040; text-decoration: none; font-size: 14px; font-weight: bold; margin-left: 8px;" aria-label="Read more: ICRC 2025 Dark Matter rapporteur on arXiv">more →</a>
+       </div>
      </div>
 
    </div>
@@ -181,6 +347,23 @@ document.addEventListener('DOMContentLoaded', function() {
                   "July", "August", "September", "October", "November", "December"];
     var month = months[currentDate.getMonth()];
     document.getElementById('copyright-date').textContent = `M.C. ${month} ${year}`;
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    var items = document.querySelectorAll('.timeline-item');
+    if (!('IntersectionObserver' in window)) {
+        items.forEach(function(item) { item.classList.add('in-view'); });
+        return;
+    }
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    items.forEach(function(item) { observer.observe(item); });
 });
 </script>
 
